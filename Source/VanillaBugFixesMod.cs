@@ -74,6 +74,7 @@ public class VanillaBugFixesMod : Mod
         new StaggerStartFix(),
         new PanicFleeFix(),
         new ShieldDomeReachFix(),
+        new MeleeDamageTotalFix(),
         new JobClearFix(),
         new PrioritySorterFix(),
         new TrainFoodOrderFix(),
