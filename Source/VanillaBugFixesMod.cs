@@ -78,6 +78,7 @@ public class VanillaBugFixesMod : Mod
         new JobClearFix(),
         new PrioritySorterFix(),
         new TrainFoodOrderFix(),
+        new PlaceRadiusFix(),
     };
 
     private Vector2 scroll;

@@ -9,6 +9,7 @@
 	<VBF_CategoryCombat>Combat</VBF_CategoryCombat>
 	<VBF_CategoryJobs>Jobs and AI</VBF_CategoryJobs>
 	<VBF_CategoryAnimals>Animals</VBF_CategoryAnimals>
+	<VBF_CategoryMapGeneration>Map generation</VBF_CategoryMapGeneration>
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
@@ -34,5 +35,9 @@
 	<VBF_TrainFoodOrder>Handlers wait for training cooldown before fetching food</VBF_TrainFoodOrder>
 	<VBF_TrainFoodOrderTip>Handlers fetch food for training before checking whether the animal can be trained again yet. Taming already checks in the right order. With this fix handlers only fetch food when the animal is ready.</VBF_TrainFoodOrderTip>
 	<VBF_TrainFoodOrderStats>Active. Stopped {0} early food trips since the game was started.</VBF_TrainFoodOrderStats>
+
+	<VBF_PlaceRadius>Map features spread out as planned</VBF_PlaceRadius>
+	<VBF_PlaceRadiusTip>When the game builds some map features, it means to scatter things over a small area. A setting gets lost on the way, so everything has to fit into a tiny spot. Insect caves (Odyssey) then never get more than 5 cocoons or egg sacs. The loot in the boss room is often missing too. Anomaly's undercave piles are capped too. With this fix new maps get the planned amounts. Insect caves get harder at high threat, as intended.</VBF_PlaceRadiusTip>
+	<VBF_PlaceRadiusStats>Active. Widened the area for {0} placements since the game was started.</VBF_PlaceRadiusStats>
 
 </LanguageData>
