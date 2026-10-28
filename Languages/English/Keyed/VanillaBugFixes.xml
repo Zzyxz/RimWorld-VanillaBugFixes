@@ -18,6 +18,9 @@
 	<VBF_PanicFleeTip>The base game is meant to let a badly hurt raider or visitor run away on their own. Each pawn has a personal limit somewhere between never and 39 % health. A math error puts that limit below zero for every pawn, so nobody ever flees from their wounds. With this fix about half of all human enemies will try to flee once they are hurt badly enough. Off by default because fights play out differently. Mods with their own flee rules, like RimPsyche Disposition, can replace this check. Then this fix has nothing to do.</VBF_PanicFleeTip>
 	<VBF_PanicFleeStats>Active. Corrected {0} flee checks since the game was started.</VBF_PanicFleeStats>
 
+	<VBF_ShieldDomeReach>Shields catch shots you're not looking at</VBF_ShieldDomeReach>
+	<VBF_ShieldDomeReachTip>Shots that are off screen move in bigger steps to save time. Shield domes only check where a step ends, so a shot can jump right over a small shield. Whether a mech shield, a Legionary or a low shield stops a bullet then depends on where your camera is. With this fix shields check the whole step.</VBF_ShieldDomeReachTip>
+
 	<VBF_JobClear>Clean up reused jobs</VBF_JobClear>
 	<VBF_JobClearTip>The game reuses old job objects but forgets to reset four of their fields. A pawn can then carry over leftovers from an earlier job, for example a hauler whose "Carrying:" line is missing after someone read a book. This fix resets those fields.</VBF_JobClearTip>
 
