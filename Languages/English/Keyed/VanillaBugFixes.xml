@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<VBF_Intro>Every fix can be switched on and off on its own. Switching takes effect at once, no restart needed. A fix that cannot work in your game (another mod changes the same code) switches itself off and tells you why here.</VBF_Intro>
+	<VBF_Active>Active.</VBF_Active>
+	<VBF_SwitchedOff>Switched off.</VBF_SwitchedOff>
+	<VBF_NotActive>Not active: {0}</VBF_NotActive>
+	<VBF_ResetStats>Reset counters</VBF_ResetStats>
+
+	<VBF_CategoryCombat>Combat</VBF_CategoryCombat>
+
+	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
+	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
+	<VBF_StaggerStartStats>Active. Corrected {0} staggers since the game was started.</VBF_StaggerStartStats>
+
+</LanguageData>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Vanilla Bug Fixes</name>
+	<author>Zzyxzz</author>
+	<packageId>Zzyxzz.VanillaBugFixes</packageId>
+	<modVersion>0.1.0</modVersion>
+	<supportedVersions>
+		<li>1.6</li>
+		<li>1.7</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+	</loadAfter>
+	<description>Fixes small bugs in the base game's code. No defs, numbers or balance are changed. Every fix can be switched on or off in the mod settings. Its tooltip there says what it does.
+
+Nothing of its own goes into your save, so you can add or remove the mod mid-save.</description>
+</ModMetaData>
