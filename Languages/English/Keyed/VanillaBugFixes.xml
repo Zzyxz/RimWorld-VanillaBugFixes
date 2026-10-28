@@ -8,6 +8,7 @@
 
 	<VBF_CategoryCombat>Combat</VBF_CategoryCombat>
 	<VBF_CategoryJobs>Jobs and AI</VBF_CategoryJobs>
+	<VBF_CategoryAnimals>Animals</VBF_CategoryAnimals>
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
@@ -19,5 +20,9 @@
 
 	<VBF_JobClear>Clean up reused jobs</VBF_JobClear>
 	<VBF_JobClearTip>The game reuses old job objects but forgets to reset four of their fields. A pawn can then carry over leftovers from an earlier job, for example a hauler whose "Carrying:" line is missing after someone read a book. This fix resets those fields.</VBF_JobClearTip>
+
+	<VBF_TrainFoodOrder>Handlers wait for training cooldown before fetching food</VBF_TrainFoodOrder>
+	<VBF_TrainFoodOrderTip>Handlers fetch food for training before checking whether the animal can be trained again yet. Taming already checks in the right order. With this fix handlers only fetch food when the animal is ready.</VBF_TrainFoodOrderTip>
+	<VBF_TrainFoodOrderStats>Active. Stopped {0} early food trips since the game was started.</VBF_TrainFoodOrderStats>
 
 </LanguageData>

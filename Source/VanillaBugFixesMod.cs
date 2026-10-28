@@ -74,6 +74,7 @@ public class VanillaBugFixesMod : Mod
         new StaggerStartFix(),
         new PanicFleeFix(),
         new JobClearFix(),
+        new TrainFoodOrderFix(),
     };
 
     private Vector2 scroll;
