@@ -21,6 +21,9 @@
 	<VBF_JobClear>Clean up reused jobs</VBF_JobClear>
 	<VBF_JobClearTip>The game reuses old job objects but forgets to reset four of their fields. A pawn can then carry over leftovers from an earlier job, for example a hauler whose "Carrying:" line is missing after someone read a book. This fix resets those fields.</VBF_JobClearTip>
 
+	<VBF_PrioritySorter>Fair tie-breaks between needs</VBF_PrioritySorter>
+	<VBF_PrioritySorterTip>When two needs have the same priority, the game is meant to pick one at random. An off-by-one error means the first entries of a list can never win such a tie. For example a hungry parent always eats before feeding their baby. This fix makes the pick random as intended.</VBF_PrioritySorterTip>
+
 	<VBF_TrainFoodOrder>Handlers wait for training cooldown before fetching food</VBF_TrainFoodOrder>
 	<VBF_TrainFoodOrderTip>Handlers fetch food for training before checking whether the animal can be trained again yet. Taming already checks in the right order. With this fix handlers only fetch food when the animal is ready.</VBF_TrainFoodOrderTip>
 	<VBF_TrainFoodOrderStats>Active. Stopped {0} early food trips since the game was started.</VBF_TrainFoodOrderStats>

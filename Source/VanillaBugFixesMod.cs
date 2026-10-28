@@ -74,6 +74,7 @@ public class VanillaBugFixesMod : Mod
         new StaggerStartFix(),
         new PanicFleeFix(),
         new JobClearFix(),
+        new PrioritySorterFix(),
         new TrainFoodOrderFix(),
     };
 
