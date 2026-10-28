@@ -7,6 +7,7 @@
 	<VBF_ResetStats>Reset counters</VBF_ResetStats>
 
 	<VBF_CategoryCombat>Combat</VBF_CategoryCombat>
+	<VBF_CategoryJobs>Jobs and AI</VBF_CategoryJobs>
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
@@ -15,5 +16,8 @@
 	<VBF_PanicFlee>Badly hurt enemies can flee (changes gameplay)</VBF_PanicFlee>
 	<VBF_PanicFleeTip>The base game is meant to let a badly hurt raider or visitor run away on their own. Each pawn has a personal limit somewhere between never and 39 % health. A math error puts that limit below zero for every pawn, so nobody ever flees from their wounds. With this fix about half of all human enemies will try to flee once they are hurt badly enough. Off by default because fights play out differently. Mods with their own flee rules, like RimPsyche Disposition, can replace this check. Then this fix has nothing to do.</VBF_PanicFleeTip>
 	<VBF_PanicFleeStats>Active. Corrected {0} flee checks since the game was started.</VBF_PanicFleeStats>
+
+	<VBF_JobClear>Clean up reused jobs</VBF_JobClear>
+	<VBF_JobClearTip>The game reuses old job objects but forgets to reset four of their fields. A pawn can then carry over leftovers from an earlier job, for example a hauler whose "Carrying:" line is missing after someone read a book. This fix resets those fields.</VBF_JobClearTip>
 
 </LanguageData>

@@ -73,6 +73,7 @@ public class VanillaBugFixesMod : Mod
     {
         new StaggerStartFix(),
         new PanicFleeFix(),
+        new JobClearFix(),
     };
 
     private Vector2 scroll;
