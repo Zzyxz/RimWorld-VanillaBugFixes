@@ -12,4 +12,8 @@
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
 	<VBF_StaggerStartStats>Active. Corrected {0} staggers since the game was started.</VBF_StaggerStartStats>
 
+	<VBF_PanicFlee>Badly hurt enemies can flee (changes gameplay)</VBF_PanicFlee>
+	<VBF_PanicFleeTip>The base game is meant to let a badly hurt raider or visitor run away on their own. Each pawn has a personal limit somewhere between never and 39 % health. A math error puts that limit below zero for every pawn, so nobody ever flees from their wounds. With this fix about half of all human enemies will try to flee once they are hurt badly enough. Off by default because fights play out differently. Mods with their own flee rules, like RimPsyche Disposition, can replace this check. Then this fix has nothing to do.</VBF_PanicFleeTip>
+	<VBF_PanicFleeStats>Active. Corrected {0} flee checks since the game was started.</VBF_PanicFleeStats>
+
 </LanguageData>

@@ -72,6 +72,7 @@ public class VanillaBugFixesMod : Mod
     public static readonly List<Fix> Fixes = new()
     {
         new StaggerStartFix(),
+        new PanicFleeFix(),
     };
 
     private Vector2 scroll;
