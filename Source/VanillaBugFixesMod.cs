@@ -80,6 +80,7 @@ public class VanillaBugFixesMod : Mod
         new TrainFoodOrderFix(),
         new PlaceRadiusFix(),
         new SettlementInhabitantsFix(),
+        new RefugeeFactionFix(),
     };
 
     private Vector2 scroll;

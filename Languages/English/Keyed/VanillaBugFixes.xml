@@ -45,4 +45,8 @@
 	<VBF_SettlementInhabitantsTip>The base game is meant to remember who lives in a faction base, so the people you meet there can show up again on your next visit. A reversed check means it never stores anyone. With this fix bases remember their residents. Who is still alive and free can come back, the rest is replaced as usual.</VBF_SettlementInhabitantsTip>
 	<VBF_SettlementInhabitantsStats>Active. Corrected {0} resident checks since the game was started.</VBF_SettlementInhabitantsStats>
 
+	<VBF_RefugeeFaction>Downed refugees can belong to a faction</VBF_RefugeeFaction>
+	<VBF_RefugeeFactionTip>Refugees from the "rescue a downed refugee" quest are meant to come from one of the world's factions most of the time, like refugees from crashed pods. Two values are swapped, so they never belong to any faction. With this fix the quest uses the same 60 % chance as the rest of the game.</VBF_RefugeeFactionTip>
+	<VBF_RefugeeFactionStats>Active. Corrected the faction chance for {0} refugees since the game was started.</VBF_RefugeeFactionStats>
+
 </LanguageData>
