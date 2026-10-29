@@ -10,6 +10,7 @@
 	<VBF_CategoryJobs>Jobs and AI</VBF_CategoryJobs>
 	<VBF_CategoryAnimals>Animals</VBF_CategoryAnimals>
 	<VBF_CategoryMapGeneration>Map generation</VBF_CategoryMapGeneration>
+	<VBF_CategoryWorld>Factions, quests and royalty</VBF_CategoryWorld>
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
@@ -39,5 +40,9 @@
 	<VBF_PlaceRadius>Map features spread out as planned</VBF_PlaceRadius>
 	<VBF_PlaceRadiusTip>When the game builds some map features, it means to scatter things over a small area. A setting gets lost on the way, so everything has to fit into a tiny spot. Insect caves (Odyssey) then never get more than 5 cocoons or egg sacs. The loot in the boss room is often missing too. Anomaly's undercave piles are capped too. With this fix new maps get the planned amounts. Insect caves get harder at high threat, as intended.</VBF_PlaceRadiusTip>
 	<VBF_PlaceRadiusStats>Active. Widened the area for {0} placements since the game was started.</VBF_PlaceRadiusStats>
+
+	<VBF_SettlementInhabitants>Settlements keep their people</VBF_SettlementInhabitants>
+	<VBF_SettlementInhabitantsTip>The base game is meant to remember who lives in a faction base, so the people you meet there can show up again on your next visit. A reversed check means it never stores anyone. With this fix bases remember their residents. Who is still alive and free can come back, the rest is replaced as usual.</VBF_SettlementInhabitantsTip>
+	<VBF_SettlementInhabitantsStats>Active. Corrected {0} resident checks since the game was started.</VBF_SettlementInhabitantsStats>
 
 </LanguageData>

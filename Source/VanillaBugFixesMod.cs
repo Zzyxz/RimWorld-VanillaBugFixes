@@ -79,6 +79,7 @@ public class VanillaBugFixesMod : Mod
         new PrioritySorterFix(),
         new TrainFoodOrderFix(),
         new PlaceRadiusFix(),
+        new SettlementInhabitantsFix(),
     };
 
     private Vector2 scroll;
