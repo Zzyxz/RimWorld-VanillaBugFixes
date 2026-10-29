@@ -53,4 +53,8 @@
 	<VBF_RefugeeFactionTip>Refugees from the "rescue a downed refugee" quest are meant to come from one of the world's factions most of the time, like refugees from crashed pods. Two values are swapped, so they never belong to any faction. With this fix the quest uses the same 60 % chance as the rest of the game.</VBF_RefugeeFactionTip>
 	<VBF_RefugeeFactionStats>Active. Corrected the faction chance for {0} refugees since the game was started.</VBF_RefugeeFactionStats>
 
+	<VBF_PermitReadyMessage>Message when a royal permit is ready again</VBF_PermitReadyMessage>
+	<VBF_PermitReadyMessageTip>When a royal permit's cooldown ends, the game shows a message. It only checks one exact moment. Pawns are not updated every single moment, so the message is missing most of the time. The permit itself always becomes usable. With this fix the message shows up while the pawn is on a map. If the cooldown ends during a caravan trip, there is still no message.</VBF_PermitReadyMessageTip>
+	<VBF_PermitReadyMessageStats>Active. Showed {0} messages the base game would have missed.</VBF_PermitReadyMessageStats>
+
 </LanguageData>

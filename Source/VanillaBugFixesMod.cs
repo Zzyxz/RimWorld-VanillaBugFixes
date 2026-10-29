@@ -82,6 +82,7 @@ public class VanillaBugFixesMod : Mod
         new SettlementInhabitantsFix(),
         new RoyalAscentRefireFix(),
         new RefugeeFactionFix(),
+        new PermitReadyMessageFix(),
     };
 
     private Vector2 scroll;
