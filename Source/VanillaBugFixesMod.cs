@@ -86,6 +86,7 @@ public class VanillaBugFixesMod : Mod
         new BookRewardsFix(),
         new SowNeighborProtectFix(),
         new DrillInfestationCheckFix(),
+        new EmpBatteryDischargeFix(),
     };
 
     private Vector2 scroll;

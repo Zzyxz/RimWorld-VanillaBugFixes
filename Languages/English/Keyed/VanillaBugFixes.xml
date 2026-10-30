@@ -70,4 +70,8 @@
 	<VBF_DrillInfestationCheckTip>A deep drill that is in use can draw insects from below. The game only counts the drill as in use if it was worked on in the very last tick. Pawns you are not looking at are only updated every few ticks, so most of the time the drill looks unused. Depending on timing, a drill out of view may never cause an infestation at all. With this fix the drill counts as in use while someone works it. Off by default because it makes drilling more dangerous.</VBF_DrillInfestationCheckTip>
 	<VBF_DrillInfestationCheckStats>Active. Counted a drill as in use {0} times the base game would have missed.</VBF_DrillInfestationCheckStats>
 
+	<VBF_EmpBatteryDischarge>Batteries hit by EMP stop giving power</VBF_EmpBatteryDischarge>
+	<VBF_EmpBatteryDischargeTip>A battery hit by EMP is meant to be cut off from its power grid until it recovers. The game leaves it out when it counts the stored power. When the grid then draws power, the stunned battery still gives its share as long as another battery is charged. With this fix only working batteries are drained.</VBF_EmpBatteryDischargeTip>
+	<VBF_EmpBatteryDischargeStats>Active. Left out stunned batteries {0} times since the game was started.</VBF_EmpBatteryDischargeStats>
+
 </LanguageData>
