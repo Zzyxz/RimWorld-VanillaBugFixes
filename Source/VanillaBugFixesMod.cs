@@ -84,6 +84,7 @@ public class VanillaBugFixesMod : Mod
         new RefugeeFactionFix(),
         new PermitReadyMessageFix(),
         new BookRewardsFix(),
+        new SowNeighborProtectFix(),
     };
 
     private Vector2 scroll;

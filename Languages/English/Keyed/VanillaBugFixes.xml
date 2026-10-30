@@ -11,6 +11,7 @@
 	<VBF_CategoryAnimals>Animals</VBF_CategoryAnimals>
 	<VBF_CategoryMapGeneration>Map generation</VBF_CategoryMapGeneration>
 	<VBF_CategoryWorld>Factions, quests and royalty</VBF_CategoryWorld>
+	<VBF_CategoryColony>Farming, mining and power</VBF_CategoryColony>
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
@@ -60,5 +61,9 @@
 	<VBF_BookRewards>Books can show up as quest rewards</VBF_BookRewards>
 	<VBF_BookRewardsTip>Quest rewards, item stashes and peace talks are meant to include books now and then. The check for books was copied from techprints and never changed. So books only show up while a techprint is still on offer: never without Royalty, never from tribes or pirates, never once all techprints are done. With this fix books only need to fit the reward value, like other rewards.</VBF_BookRewardsTip>
 	<VBF_BookRewardsStats>Active. Made {0} book rewards the base game would have skipped.</VBF_BookRewardsStats>
+
+	<VBF_SowNeighborProtect>Growers respect "allow cutting" next door</VBF_SowNeighborProtect>
+	<VBF_SowNeighborProtectTip>Some plants, like trees, block sowing on the cells around them. When a grower wants to sow next to such a plant, the game checks whether the plant may be cut. For plants in a neighboring growing zone this check never works: a zone with cutting switched off still loses its trees or old crops to the sowing next door. With this fix a growing zone with cutting off keeps all its plants, the same as it already does for its own cells.</VBF_SowNeighborProtectTip>
+	<VBF_SowNeighborProtectStats>Active. Kept {0} plants from being cut since the game was started.</VBF_SowNeighborProtectStats>
 
 </LanguageData>
