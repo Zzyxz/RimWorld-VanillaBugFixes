@@ -74,4 +74,8 @@
 	<VBF_EmpBatteryDischargeTip>A battery hit by EMP is meant to be cut off from its power grid until it recovers. The game leaves it out when it counts the stored power. When the grid then draws power, the stunned battery still gives its share as long as another battery is charged. With this fix only working batteries are drained.</VBF_EmpBatteryDischargeTip>
 	<VBF_EmpBatteryDischargeStats>Active. Left out stunned batteries {0} times since the game was started.</VBF_EmpBatteryDischargeStats>
 
+	<VBF_BookQuestTiming>Quest books work off screen</VBF_BookQuestTiming>
+	<VBF_BookQuestTimingTip>Some Odyssey books hide a quest that a reader can find while reading. Pawns you are not looking at are only updated every few ticks. Everything else a book does counts the time that passed, but the quest check only counts one tick. Out of view a reader could take up to 15 times longer to find the quest. With this fix the quest check counts the reading time like the rest of the book.</VBF_BookQuestTimingTip>
+	<VBF_BookQuestTimingStats>Active. Counted the full reading time {0} times since the game was started.</VBF_BookQuestTimingStats>
+
 </LanguageData>
