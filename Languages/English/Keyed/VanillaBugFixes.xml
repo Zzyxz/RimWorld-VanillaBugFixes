@@ -66,4 +66,8 @@
 	<VBF_SowNeighborProtectTip>Some plants, like trees, block sowing on the cells around them. When a grower wants to sow next to such a plant, the game checks whether the plant may be cut. For plants in a neighboring growing zone this check never works: a zone with cutting switched off still loses its trees or old crops to the sowing next door. With this fix a growing zone with cutting off keeps all its plants, the same as it already does for its own cells.</VBF_SowNeighborProtectTip>
 	<VBF_SowNeighborProtectStats>Active. Kept {0} plants from being cut since the game was started.</VBF_SowNeighborProtectStats>
 
+	<VBF_DrillInfestationCheck>Deep drill infestations work off screen (changes gameplay)</VBF_DrillInfestationCheck>
+	<VBF_DrillInfestationCheckTip>A deep drill that is in use can draw insects from below. The game only counts the drill as in use if it was worked on in the very last tick. Pawns you are not looking at are only updated every few ticks, so most of the time the drill looks unused. Depending on timing, a drill out of view may never cause an infestation at all. With this fix the drill counts as in use while someone works it. Off by default because it makes drilling more dangerous.</VBF_DrillInfestationCheckTip>
+	<VBF_DrillInfestationCheckStats>Active. Counted a drill as in use {0} times the base game would have missed.</VBF_DrillInfestationCheckStats>
+
 </LanguageData>
