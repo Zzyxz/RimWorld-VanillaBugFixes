@@ -3,7 +3,7 @@
 	<name>Vanilla Bug Fixes</name>
 	<author>Zzyxzz</author>
 	<packageId>Zzyxzz.VanillaBugFixes</packageId>
-	<modVersion>0.6.0</modVersion>
+	<modVersion>0.7.0</modVersion>
 	<supportedVersions>
 		<li>1.6</li>
 		<li>1.7</li>
@@ -19,6 +19,38 @@
 		<li>brrainz.harmony</li>
 	</loadAfter>
 	<description>Fixes small bugs in the base game's code. No defs, numbers or balance are changed. Every fix can be switched on or off in the mod settings. Its tooltip there says what it does.
+
+Combat
+- First stagger at the right speed
+- Badly hurt enemies can flee (off by default)
+- Shields catch shots you're not looking at (does nothing with Combat Extended)
+- Melee hits count all their damage (does nothing with Combat Extended)
+
+Jobs and AI
+- Clean up reused jobs
+- Fair tie-breaks between needs
+
+Animals
+- Handlers wait for the training cooldown
+
+Map generation
+- Map features spread out as planned
+
+Factions, quests and royalty
+- Settlements keep their people
+- Royal Ascent comes back after failing
+- Downed refugees can belong to a faction
+- Message when a royal permit is ready again
+- Books can show up as quest rewards
+- Quest books work off screen
+
+Farming, mining and power
+- Growers respect "allow cutting" next door
+- Deep drill infestations work off screen (off by default)
+- Batteries hit by EMP stop giving power
+
+Daily life
+- Snow is still there after loading
 
 Nothing of its own goes into your save, so you can add or remove the mod mid-save.</description>
 </ModMetaData>
