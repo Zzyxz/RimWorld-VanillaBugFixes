@@ -88,6 +88,7 @@ public class VanillaBugFixesMod : Mod
         new DrillInfestationCheckFix(),
         new EmpBatteryDischargeFix(),
         new BookQuestTimingFix(),
+        new SnowTotalAfterLoadFix(),
     };
 
     private Vector2 scroll;

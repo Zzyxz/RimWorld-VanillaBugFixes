@@ -12,6 +12,7 @@
 	<VBF_CategoryMapGeneration>Map generation</VBF_CategoryMapGeneration>
 	<VBF_CategoryWorld>Factions, quests and royalty</VBF_CategoryWorld>
 	<VBF_CategoryColony>Farming, mining and power</VBF_CategoryColony>
+	<VBF_CategoryDailyLife>Daily life</VBF_CategoryDailyLife>
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
@@ -78,4 +79,7 @@
 	<VBF_BookQuestTimingTip>Some Odyssey books hide a quest that a reader can find while reading. Pawns you are not looking at are only updated every few ticks. Everything else a book does counts the time that passed, but the quest check only counts one tick. Out of view a reader could take up to 15 times longer to find the quest. With this fix the quest check counts the reading time like the rest of the book.</VBF_BookQuestTimingTip>
 	<VBF_BookQuestTimingStats>Active. Counted the full reading time {0} times since the game was started.</VBF_BookQuestTimingStats>
 
+	<VBF_SnowTotalAfterLoad>Snow is still there after loading</VBF_SnowTotalAfterLoad>
+	<VBF_SnowTotalAfterLoadTip>The game keeps a running total of all snow on a map. That total is not saved, so it starts at zero after every load while the snow itself is still there. Colonists then won't build snowmen until enough new snow has fallen. The faint shadow behind map labels on snowy maps is missing too. With this fix the total is counted again from the snow on the map when a save is loaded.</VBF_SnowTotalAfterLoadTip>
+	<VBF_SnowTotalAfterLoadStats>Active. Counted the snow again on {0} loaded maps since the game was started.</VBF_SnowTotalAfterLoadStats>
 </LanguageData>
