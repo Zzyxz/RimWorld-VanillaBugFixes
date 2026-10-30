@@ -57,4 +57,8 @@
 	<VBF_PermitReadyMessageTip>When a royal permit's cooldown ends, the game shows a message. It only checks one exact moment. Pawns are not updated every single moment, so the message is missing most of the time. The permit itself always becomes usable. With this fix the message shows up while the pawn is on a map. If the cooldown ends during a caravan trip, there is still no message.</VBF_PermitReadyMessageTip>
 	<VBF_PermitReadyMessageStats>Active. Showed {0} messages the base game would have missed.</VBF_PermitReadyMessageStats>
 
+	<VBF_BookRewards>Books can show up as quest rewards</VBF_BookRewards>
+	<VBF_BookRewardsTip>Quest rewards, item stashes and peace talks are meant to include books now and then. The check for books was copied from techprints and never changed. So books only show up while a techprint is still on offer: never without Royalty, never from tribes or pirates, never once all techprints are done. With this fix books only need to fit the reward value, like other rewards.</VBF_BookRewardsTip>
+	<VBF_BookRewardsStats>Active. Made {0} book rewards the base game would have skipped.</VBF_BookRewardsStats>
+
 </LanguageData>

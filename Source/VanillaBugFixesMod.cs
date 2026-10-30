@@ -83,6 +83,7 @@ public class VanillaBugFixesMod : Mod
         new RoyalAscentRefireFix(),
         new RefugeeFactionFix(),
         new PermitReadyMessageFix(),
+        new BookRewardsFix(),
     };
 
     private Vector2 scroll;
