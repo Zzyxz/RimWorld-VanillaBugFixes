@@ -3,6 +3,7 @@
 	<name>Vanilla Bug Fixes</name>
 	<author>Zzyxzz</author>
 	<packageId>Zzyxzz.VanillaBugFixes</packageId>
+	<url>https://github.com/Zzyxz/RimWorld-VanillaBugFixes</url>
 	<modVersion>0.7.0</modVersion>
 	<supportedVersions>
 		<li>1.6</li>
@@ -52,5 +53,7 @@ Farming, mining and power
 Daily life
 - Snow is still there after loading
 
-Nothing of its own goes into your save, so you can add or remove the mod mid-save.</description>
+Nothing of its own goes into your save, so you can add or remove the mod mid-save.
+
+Source code: https://github.com/Zzyxz/RimWorld-VanillaBugFixes</description>
 </ModMetaData>
