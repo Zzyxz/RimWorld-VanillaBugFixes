@@ -89,6 +89,7 @@ public class VanillaBugFixesMod : Mod
         new EmpBatteryDischargeFix(),
         new BookQuestTimingFix(),
         new SnowTotalAfterLoadFix(),
+        new ChildShamblersSaveFix(),
     };
 
     private Vector2 scroll;
