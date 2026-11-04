@@ -90,6 +90,7 @@ public class VanillaBugFixesMod : Mod
         new BookQuestTimingFix(),
         new SnowTotalAfterLoadFix(),
         new ChildShamblersSaveFix(),
+        new AnomalyIncidentSaveFix(),
     };
 
     private Vector2 scroll;

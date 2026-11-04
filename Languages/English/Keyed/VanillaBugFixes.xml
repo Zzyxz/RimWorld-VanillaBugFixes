@@ -87,4 +87,8 @@
 	<VBF_ChildShamblersSave>Child shambler setting is saved</VBF_ChildShamblersSave>
 	<VBF_ChildShamblersSaveTip>The custom difficulty option for child shamblers is never written to the save file. If you turn it off it comes back on after the next load. Dead children can then rise again. With this fix the setting is saved like the others.</VBF_ChildShamblersSaveTip>
 	<VBF_ChildShamblersSaveStats>Active. Loaded {0} saves with the option turned off since the game was started.</VBF_ChildShamblersSaveStats>
+
+	<VBF_AnomalyIncidentSave>Monolith events survive saving</VBF_AnomalyIncidentSave>
+	<VBF_AnomalyIncidentSaveTip>When the monolith reaches a new level the game waits 12 to 36 hours before it sends the event that belongs to that level. The wait is not saved. If you save and load in between the event never comes. With this fix the wait is saved.</VBF_AnomalyIncidentSaveTip>
+	<VBF_AnomalyIncidentSaveStats>Active. Brought back a waiting event {0} times since the game was started.</VBF_AnomalyIncidentSaveStats>
 </LanguageData>
