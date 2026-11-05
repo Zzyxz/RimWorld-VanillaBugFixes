@@ -91,6 +91,7 @@ public class VanillaBugFixesMod : Mod
         new SnowTotalAfterLoadFix(),
         new ChildShamblersSaveFix(),
         new AnomalyIncidentSaveFix(),
+        new ShuttleHealthSaveFix(),
     };
 
     private Vector2 scroll;

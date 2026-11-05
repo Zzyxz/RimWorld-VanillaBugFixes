@@ -91,4 +91,8 @@
 	<VBF_AnomalyIncidentSave>Monolith events survive saving</VBF_AnomalyIncidentSave>
 	<VBF_AnomalyIncidentSaveTip>When the monolith reaches a new level the game waits 12 to 36 hours before it sends the event that belongs to that level. The wait is not saved. If you save and load in between the event never comes. With this fix the wait is saved.</VBF_AnomalyIncidentSaveTip>
 	<VBF_AnomalyIncidentSaveStats>Active. Brought back a waiting event {0} times since the game was started.</VBF_AnomalyIncidentSaveStats>
+
+	<VBF_ShuttleHealthSave>Lending shuttle keeps its health check</VBF_ShuttleHealthSave>
+	<VBF_ShuttleHealthSaveTip>The shuttle that picks up lent colonists should only take pawns who are healthy enough. It forgets that rule when the game is saved and loaded. After that it also takes pawns who are downed or can't use their hands. With this fix the rule is saved.</VBF_ShuttleHealthSaveTip>
+	<VBF_ShuttleHealthSaveStats>Active. Kept the rule on {0} shuttles after loading since the game was started.</VBF_ShuttleHealthSaveStats>
 </LanguageData>
