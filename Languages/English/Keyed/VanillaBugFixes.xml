@@ -95,4 +95,8 @@
 	<VBF_ShuttleHealthSave>Lending shuttle keeps its health check</VBF_ShuttleHealthSave>
 	<VBF_ShuttleHealthSaveTip>The shuttle that picks up lent colonists should only take pawns who are healthy enough. It forgets that rule when the game is saved and loaded. After that it also takes pawns who are downed or can't use their hands. With this fix the rule is saved.</VBF_ShuttleHealthSaveTip>
 	<VBF_ShuttleHealthSaveStats>Active. Kept the rule on {0} shuttles after loading since the game was started.</VBF_ShuttleHealthSaveStats>
+
+	<VBF_ConcertSpot>Concerts use the best instrument</VBF_ConcertSpot>
+	<VBF_ConcertSpotTip>A concert should happen at the instrument with the longest range. If several are equal the game picks one at random. A counter in the code is never updated, so the game just takes whichever usable instrument comes last in its list. With this fix the best instrument wins.</VBF_ConcertSpotTip>
+	<VBF_ConcertSpotStats>Active. Picked the concert spot {0} times since the game was started.</VBF_ConcertSpotStats>
 </LanguageData>

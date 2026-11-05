@@ -92,6 +92,7 @@ public class VanillaBugFixesMod : Mod
         new ChildShamblersSaveFix(),
         new AnomalyIncidentSaveFix(),
         new ShuttleHealthSaveFix(),
+        new ConcertSpotFix(),
     };
 
     private Vector2 scroll;
