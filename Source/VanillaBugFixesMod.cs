@@ -94,6 +94,7 @@ public class VanillaBugFixesMod : Mod
         new ShuttleHealthSaveFix(),
         new ConcertSpotFix(),
         new WeddingGuestsFix(),
+        new HaulSourceCheckFix(),
     };
 
     private Vector2 scroll;

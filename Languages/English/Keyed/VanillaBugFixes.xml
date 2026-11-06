@@ -103,4 +103,8 @@
 	<VBF_WeddingGuests>Wedding guests check the right spouse count</VBF_WeddingGuests>
 	<VBF_WeddingGuestsTip>Whether a guest is willing to come to a wedding depends on how many spouses each partner already has. For the second partner the game counts the spouses of the first one instead. You only notice this when partners have different numbers of spouses (Ideology). With this fix each partner is counted on their own.</VBF_WeddingGuestsTip>
 	<VBF_WeddingGuestsStats>Active. Corrected the count for {0} weddings since the game was started.</VBF_WeddingGuestsStats>
+
+	<VBF_HaulSourceCheck>Bookcases and outfit stands get rechecked</VBF_HaulSourceCheck>
+	<VBF_HaulSourceCheckTip>The game keeps rechecking bookcases and outfit stands for items that should be moved elsewhere. A wrong index means the later ones in the list are never reached once you have more than five. A book in an old bookcase then isn't found when you change the storage priority somewhere else. With this fix all of them are rechecked in turn.</VBF_HaulSourceCheckTip>
+	<VBF_HaulSourceCheckStats>Active. Rechecked {0} bookcases or stands that would have been skipped since the game was started.</VBF_HaulSourceCheckStats>
 </LanguageData>
