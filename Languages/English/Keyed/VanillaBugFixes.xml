@@ -99,4 +99,8 @@
 	<VBF_ConcertSpot>Concerts use the best instrument</VBF_ConcertSpot>
 	<VBF_ConcertSpotTip>A concert should happen at the instrument with the longest range. If several are equal the game picks one at random. A counter in the code is never updated, so the game just takes whichever usable instrument comes last in its list. With this fix the best instrument wins.</VBF_ConcertSpotTip>
 	<VBF_ConcertSpotStats>Active. Picked the concert spot {0} times since the game was started.</VBF_ConcertSpotStats>
+
+	<VBF_WeddingGuests>Wedding guests check the right spouse count</VBF_WeddingGuests>
+	<VBF_WeddingGuestsTip>Whether a guest is willing to come to a wedding depends on how many spouses each partner already has. For the second partner the game counts the spouses of the first one instead. You only notice this when partners have different numbers of spouses (Ideology). With this fix each partner is counted on their own.</VBF_WeddingGuestsTip>
+	<VBF_WeddingGuestsStats>Active. Corrected the count for {0} weddings since the game was started.</VBF_WeddingGuestsStats>
 </LanguageData>

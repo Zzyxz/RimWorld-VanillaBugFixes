@@ -93,6 +93,7 @@ public class VanillaBugFixesMod : Mod
         new AnomalyIncidentSaveFix(),
         new ShuttleHealthSaveFix(),
         new ConcertSpotFix(),
+        new WeddingGuestsFix(),
     };
 
     private Vector2 scroll;
