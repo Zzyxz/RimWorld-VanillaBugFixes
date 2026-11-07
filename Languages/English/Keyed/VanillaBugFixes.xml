@@ -107,4 +107,8 @@
 	<VBF_HaulSourceCheck>Bookcases and outfit stands get rechecked</VBF_HaulSourceCheck>
 	<VBF_HaulSourceCheckTip>The game keeps rechecking bookcases and outfit stands for items that should be moved elsewhere. A wrong index means the later ones in the list are never reached once you have more than five. A book in an old bookcase then isn't found when you change the storage priority somewhere else. With this fix all of them are rechecked in turn.</VBF_HaulSourceCheckTip>
 	<VBF_HaulSourceCheckStats>Active. Rechecked {0} bookcases or stands that would have been skipped since the game was started.</VBF_HaulSourceCheckStats>
+
+	<VBF_ImplantRemoval>Removing an implant takes the chosen one</VBF_ImplantRemoval>
+	<VBF_ImplantRemovalTip>Some implants can sit on both sides of the body, like an elbow blade in each arm. When you order the removal of one the game takes the first matching implant on the pawn without checking which body part you picked. With this fix the chosen one is removed.</VBF_ImplantRemovalTip>
+	<VBF_ImplantRemovalStats>Active. Removed a different implant than the game would have {0} times since the game was started.</VBF_ImplantRemovalStats>
 </LanguageData>
