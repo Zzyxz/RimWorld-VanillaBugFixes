@@ -96,6 +96,7 @@ public class VanillaBugFixesMod : Mod
         new WeddingGuestsFix(),
         new HaulSourceCheckFix(),
         new ImplantRemovalFix(),
+        new SuppressionXpFix(),
     };
 
     private Vector2 scroll;

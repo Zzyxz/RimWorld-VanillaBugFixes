@@ -111,4 +111,8 @@
 	<VBF_ImplantRemoval>Removing an implant takes the chosen one</VBF_ImplantRemoval>
 	<VBF_ImplantRemovalTip>Some implants can sit on both sides of the body, like an elbow blade in each arm. When you order the removal of one the game takes the first matching implant on the pawn without checking which body part you picked. With this fix the chosen one is removed.</VBF_ImplantRemovalTip>
 	<VBF_ImplantRemovalStats>Active. Removed a different implant than the game would have {0} times since the game was started.</VBF_ImplantRemovalStats>
+
+	<VBF_SuppressionXp>Suppression gives full skill experience</VBF_SuppressionXp>
+	<VBF_SuppressionXpTip>A pawn who suppresses an anomaly earns intellectual experience with every update. Pawns you aren't looking at are updated every 15 ticks but still get the experience of a single tick. They learn only a fifteenth of what they would on screen. With this fix the experience counts all the ticks.</VBF_SuppressionXpTip>
+	<VBF_SuppressionXpStats>Active. Added the missing experience {0} times since the game was started.</VBF_SuppressionXpStats>
 </LanguageData>
