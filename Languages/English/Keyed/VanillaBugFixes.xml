@@ -115,4 +115,8 @@
 	<VBF_SuppressionXp>Suppression gives full skill experience</VBF_SuppressionXp>
 	<VBF_SuppressionXpTip>A pawn who suppresses an anomaly earns intellectual experience with every update. Pawns you aren't looking at are updated every 15 ticks but still get the experience of a single tick. They learn only a fifteenth of what they would on screen. With this fix the experience counts all the ticks.</VBF_SuppressionXpTip>
 	<VBF_SuppressionXpStats>Active. Added the missing experience {0} times since the game was started.</VBF_SuppressionXpStats>
+
+	<VBF_TerrorRemoval>Slaves forget all terror</VBF_TerrorRemoval>
+	<VBF_TerrorRemovalTip>Slaves get terror thoughts from what they see around them. When they lose sight of it the game removes those thoughts while walking through the list, which skips every second one. Some terror then lingers for up to a day and keeps the suppression value off. With this fix the whole list is removed.</VBF_TerrorRemovalTip>
+	<VBF_TerrorRemovalStats>Active. Removed the skipped thoughts {0} times since the game was started.</VBF_TerrorRemovalStats>
 </LanguageData>

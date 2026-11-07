@@ -97,6 +97,7 @@ public class VanillaBugFixesMod : Mod
         new HaulSourceCheckFix(),
         new ImplantRemovalFix(),
         new SuppressionXpFix(),
+        new TerrorRemovalFix(),
     };
 
     private Vector2 scroll;
