@@ -119,4 +119,8 @@
 	<VBF_TerrorRemoval>Slaves forget all terror</VBF_TerrorRemoval>
 	<VBF_TerrorRemovalTip>Slaves get terror thoughts from what they see around them. When they lose sight of it the game removes those thoughts while walking through the list, which skips every second one. Some terror then lingers for up to a day and keeps the suppression value off. With this fix the whole list is removed.</VBF_TerrorRemovalTip>
 	<VBF_TerrorRemovalStats>Active. Removed the skipped thoughts {0} times since the game was started.</VBF_TerrorRemovalStats>
+
+	<VBF_WaterRaidMap>Water raids arrive on the right map</VBF_WaterRaidMap>
+	<VBF_WaterRaidMapTip>Raiders who rise out of a river or the sea are placed on the map you are looking at. With more than one colony a raid aimed at another colony puts them on the wrong map. With this fix they arrive on the map of the raid.</VBF_WaterRaidMapTip>
+	<VBF_WaterRaidMapStats>Active. Sent {0} raids to the right map since the game was started.</VBF_WaterRaidMapStats>
 </LanguageData>

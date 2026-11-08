@@ -98,6 +98,7 @@ public class VanillaBugFixesMod : Mod
         new ImplantRemovalFix(),
         new SuppressionXpFix(),
         new TerrorRemovalFix(),
+        new WaterRaidMapFix(),
     };
 
     private Vector2 scroll;
