@@ -123,4 +123,8 @@
 	<VBF_WaterRaidMap>Water raids arrive on the right map</VBF_WaterRaidMap>
 	<VBF_WaterRaidMapTip>Raiders who rise out of a river or the sea are placed on the map you are looking at. With more than one colony a raid aimed at another colony puts them on the wrong map. With this fix they arrive on the map of the raid.</VBF_WaterRaidMapTip>
 	<VBF_WaterRaidMapStats>Active. Sent {0} raids to the right map since the game was started.</VBF_WaterRaidMapStats>
+
+	<VBF_MultiAttackTargets>Attack orders reach the right pawns</VBF_MultiAttackTargets>
+	<VBF_MultiAttackTargetsTip>When you select several pawns and right-click a spot with more than one target, the game builds the attack options one after another but keeps a single shared list of pawns. The last target replaces the list of the others, so some pawns get no order. With this fix every option keeps its own list.</VBF_MultiAttackTargetsTip>
+	<VBF_MultiAttackTargetsStats>Active. Used the right pawn list {0} times since the game was started.</VBF_MultiAttackTargetsStats>
 </LanguageData>

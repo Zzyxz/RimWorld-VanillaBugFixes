@@ -99,6 +99,7 @@ public class VanillaBugFixesMod : Mod
         new SuppressionXpFix(),
         new TerrorRemovalFix(),
         new WaterRaidMapFix(),
+        new MultiAttackTargetsFix(),
     };
 
     private Vector2 scroll;
