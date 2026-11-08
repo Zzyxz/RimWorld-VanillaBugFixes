@@ -127,4 +127,8 @@
 	<VBF_MultiAttackTargets>Attack orders reach the right pawns</VBF_MultiAttackTargets>
 	<VBF_MultiAttackTargetsTip>When you select several pawns and right-click a spot with more than one target, the game builds the attack options one after another but keeps a single shared list of pawns. The last target replaces the list of the others, so some pawns get no order. With this fix every option keeps its own list.</VBF_MultiAttackTargetsTip>
 	<VBF_MultiAttackTargetsStats>Active. Used the right pawn list {0} times since the game was started.</VBF_MultiAttackTargetsStats>
+
+	<VBF_CaravanPermitCost>Caravan permit buttons keep their own cost</VBF_CaravanPermitCost>
+	<VBF_CaravanPermitCostTip>Royal permits that call a shuttle or supplies to a caravan share one stored value that says whether the call is free. It is overwritten for every titled pawn in the caravan. A button can end up charging or not charging by the rules of another pawn. With this fix each button keeps the value of its own pawn.</VBF_CaravanPermitCostTip>
+	<VBF_CaravanPermitCostStats>Active. Used the right cost {0} times since the game was started.</VBF_CaravanPermitCostStats>
 </LanguageData>

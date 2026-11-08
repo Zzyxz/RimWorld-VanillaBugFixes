@@ -100,6 +100,7 @@ public class VanillaBugFixesMod : Mod
         new TerrorRemovalFix(),
         new WaterRaidMapFix(),
         new MultiAttackTargetsFix(),
+        new CaravanPermitCostFix(),
     };
 
     private Vector2 scroll;
