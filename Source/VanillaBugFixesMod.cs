@@ -101,6 +101,7 @@ public class VanillaBugFixesMod : Mod
         new WaterRaidMapFix(),
         new MultiAttackTargetsFix(),
         new CaravanPermitCostFix(),
+        new RoleLossThoughtFix(),
     };
 
     private Vector2 scroll;

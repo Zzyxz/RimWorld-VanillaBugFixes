@@ -131,4 +131,8 @@
 	<VBF_CaravanPermitCost>Caravan permit buttons keep their own cost</VBF_CaravanPermitCost>
 	<VBF_CaravanPermitCostTip>Royal permits that call a shuttle or supplies to a caravan share one stored value that says whether the call is free. It is overwritten for every titled pawn in the caravan. A button can end up charging or not charging by the rules of another pawn. With this fix each button keeps the value of its own pawn.</VBF_CaravanPermitCostTip>
 	<VBF_CaravanPermitCostStats>Active. Used the right cost {0} times since the game was started.</VBF_CaravanPermitCostStats>
+
+	<VBF_RoleLossThought>Role changes don't count as a loss</VBF_RoleLossThought>
+	<VBF_RoleLossThoughtTip>When a pawn moves from a role that several pawns can hold to another role the game still gives it the mood penalty for losing a role. Roles that only one pawn can hold don't do that. With this fix the penalty only comes when the role is really taken away.</VBF_RoleLossThoughtTip>
+	<VBF_RoleLossThoughtStats>Active. Skipped the penalty {0} times since the game was started.</VBF_RoleLossThoughtStats>
 </LanguageData>
