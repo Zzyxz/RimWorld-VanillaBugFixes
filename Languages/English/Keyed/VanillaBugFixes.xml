@@ -135,4 +135,8 @@
 	<VBF_RoleLossThought>Role changes don't count as a loss</VBF_RoleLossThought>
 	<VBF_RoleLossThoughtTip>When a pawn moves from a role that several pawns can hold to another role the game still gives it the mood penalty for losing a role. Roles that only one pawn can hold don't do that. With this fix the penalty only comes when the role is really taken away.</VBF_RoleLossThoughtTip>
 	<VBF_RoleLossThoughtStats>Active. Skipped the penalty {0} times since the game was started.</VBF_RoleLossThoughtStats>
+
+	<VBF_HistoryGoodwillTrim>Event history stays in step</VBF_HistoryGoodwillTrim>
+	<VBF_HistoryGoodwillTrimTip>The game remembers the last 20 events of each kind with a time and a goodwill value. Old entries are cut from the list of times but never from the list of goodwill values. After that the two lists no longer match. This skews the recent events shown for a faction and which old entries get cleaned up. With this fix both lists are cut together.</VBF_HistoryGoodwillTrimTip>
+	<VBF_HistoryGoodwillTrimStats>Active. Trimmed the lists {0} times since the game was started.</VBF_HistoryGoodwillTrimStats>
 </LanguageData>

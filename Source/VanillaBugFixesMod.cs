@@ -102,6 +102,7 @@ public class VanillaBugFixesMod : Mod
         new MultiAttackTargetsFix(),
         new CaravanPermitCostFix(),
         new RoleLossThoughtFix(),
+        new HistoryGoodwillTrimFix(),
     };
 
     private Vector2 scroll;
