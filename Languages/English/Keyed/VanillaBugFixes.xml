@@ -143,4 +143,8 @@
 	<VBF_TaleIgnoreRoll>Tales are saved as often as planned</VBF_TaleIgnoreRoll>
 	<VBF_TaleIgnoreRollTip>Being hunted, vomiting, being on fire and walking naked should be remembered half of the time. The game rolls the dice twice for them, so only a quarter are remembered. Artwork then has fewer tales to pick from. With this fix it rolls once.</VBF_TaleIgnoreRollTip>
 	<VBF_TaleIgnoreRollStats>Active. Rolled once for {0} tales since the game was started.</VBF_TaleIgnoreRollStats>
+
+	<VBF_AreaInvertUpdate>Inverted areas work at once</VBF_AreaInvertUpdate>
+	<VBF_AreaInvertUpdateTip>The invert button in the area manager doesn't tell the pathfinder or the region data that every cell has changed. Pawns restricted to that area can keep acting as if the old shape was still there until you reload. With this fix the change is reported for every cell.</VBF_AreaInvertUpdateTip>
+	<VBF_AreaInvertUpdateStats>Active. Updated the pathing data for {0} inverted areas since the game was started.</VBF_AreaInvertUpdateStats>
 </LanguageData>

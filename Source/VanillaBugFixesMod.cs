@@ -104,6 +104,7 @@ public class VanillaBugFixesMod : Mod
         new RoleLossThoughtFix(),
         new HistoryGoodwillTrimFix(),
         new TaleIgnoreRollFix(),
+        new AreaInvertUpdateFix(),
     };
 
     private Vector2 scroll;
