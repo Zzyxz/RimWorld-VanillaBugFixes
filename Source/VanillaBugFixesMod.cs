@@ -103,6 +103,7 @@ public class VanillaBugFixesMod : Mod
         new CaravanPermitCostFix(),
         new RoleLossThoughtFix(),
         new HistoryGoodwillTrimFix(),
+        new TaleIgnoreRollFix(),
     };
 
     private Vector2 scroll;

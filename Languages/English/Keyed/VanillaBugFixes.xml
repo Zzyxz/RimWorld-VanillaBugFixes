@@ -139,4 +139,8 @@
 	<VBF_HistoryGoodwillTrim>Event history stays in step</VBF_HistoryGoodwillTrim>
 	<VBF_HistoryGoodwillTrimTip>The game remembers the last 20 events of each kind with a time and a goodwill value. Old entries are cut from the list of times but never from the list of goodwill values. After that the two lists no longer match. This skews the recent events shown for a faction and which old entries get cleaned up. With this fix both lists are cut together.</VBF_HistoryGoodwillTrimTip>
 	<VBF_HistoryGoodwillTrimStats>Active. Trimmed the lists {0} times since the game was started.</VBF_HistoryGoodwillTrimStats>
+
+	<VBF_TaleIgnoreRoll>Tales are saved as often as planned</VBF_TaleIgnoreRoll>
+	<VBF_TaleIgnoreRollTip>Being hunted, vomiting, being on fire and walking naked should be remembered half of the time. The game rolls the dice twice for them, so only a quarter are remembered. Artwork then has fewer tales to pick from. With this fix it rolls once.</VBF_TaleIgnoreRollTip>
+	<VBF_TaleIgnoreRollStats>Active. Rolled once for {0} tales since the game was started.</VBF_TaleIgnoreRollStats>
 </LanguageData>
