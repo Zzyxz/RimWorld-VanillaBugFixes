@@ -4,7 +4,7 @@
 	<author>Zzyxzz</author>
 	<packageId>Zzyxzz.VanillaBugFixes</packageId>
 	<url>https://github.com/Zzyxz/RimWorld-VanillaBugFixes</url>
-	<modVersion>0.7.0</modVersion>
+	<modVersion>0.8.0</modVersion>
 	<supportedVersions>
 		<li>1.6</li>
 		<li>1.7</li>
@@ -26,10 +26,14 @@ Combat
 - Badly hurt enemies can flee (off by default)
 - Shields catch shots you're not looking at (does nothing with Combat Extended)
 - Melee hits count all their damage (does nothing with Combat Extended)
+- Water raids arrive on the right map
+- Attack orders reach the right pawns
 
 Jobs and AI
 - Clean up reused jobs
 - Fair tie-breaks between needs
+- Suppression gives full skill experience
+- Inverted areas work at once
 
 Animals
 - Handlers wait for the training cooldown
@@ -44,6 +48,8 @@ Factions, quests and royalty
 - Message when a royal permit is ready again
 - Books can show up as quest rewards
 - Quest books work off screen
+- Caravan permit buttons keep their own cost
+- Event history stays in step
 
 Farming, mining and power
 - Growers respect "allow cutting" next door
@@ -52,8 +58,20 @@ Farming, mining and power
 
 Daily life
 - Snow is still there after loading
+- Concerts use the best instrument
+- Wedding guests check the right spouse count
+- Bookcases and outfit stands get rechecked
+- Removing an implant takes the chosen one
+- Slaves forget all terror
+- Role changes don't count as a loss
+- Tales are saved as often as planned
 
-Nothing of its own goes into your save, so you can add or remove the mod mid-save.
+Saving and loading
+- Child shambler setting is saved
+- Monolith events survive saving
+- Lending shuttle keeps its health check
+
+The mod adds no defs or classes to your save, so you can add or remove it mid-save. Three fixes write one extra value that the base game ignores without the mod.
 
 Source code: https://github.com/Zzyxz/RimWorld-VanillaBugFixes</description>
 </ModMetaData>
