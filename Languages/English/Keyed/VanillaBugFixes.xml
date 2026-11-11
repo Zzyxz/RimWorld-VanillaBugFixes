@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<VBF_Intro>Every fix can be switched on and off on its own. Switching takes effect at once, no restart needed. A fix that cannot work in your game (another mod changes the same code) switches itself off and tells you why here.</VBF_Intro>
+	<VBF_Intro>Every fix can be switched on and off on its own. No restart is needed. Most fixes take effect at once. Fixes for saved data work the next time a save is loaded. A fix that cannot work in your game (another mod changes the same code) switches itself off and tells you why here.</VBF_Intro>
 	<VBF_Active>Active.</VBF_Active>
 	<VBF_SwitchedOff>Switched off.</VBF_SwitchedOff>
 	<VBF_NotActive>Not active: {0}</VBF_NotActive>
@@ -66,7 +66,7 @@
 
 	<VBF_SowNeighborProtect>Growers respect "allow cutting" next door</VBF_SowNeighborProtect>
 	<VBF_SowNeighborProtectTip>Some plants, like trees, block sowing on the cells around them. When a grower wants to sow next to such a plant, the game checks whether the plant may be cut. For plants in a neighboring growing zone this check never works: a zone with cutting switched off still loses its trees or old crops to the sowing next door. With this fix a growing zone with cutting off keeps all its plants, the same as it already does for its own cells.</VBF_SowNeighborProtectTip>
-	<VBF_SowNeighborProtectStats>Active. Kept {0} plants from being cut since the game was started.</VBF_SowNeighborProtectStats>
+	<VBF_SowNeighborProtectStats>Active. Blocked sowing next to a protected plant {0} times since the game was started.</VBF_SowNeighborProtectStats>
 
 	<VBF_DrillInfestationCheck>Deep drill infestations work off screen (changes gameplay)</VBF_DrillInfestationCheck>
 	<VBF_DrillInfestationCheckTip>A deep drill that is in use can draw insects from below. The game only counts the drill as in use if it was worked on in the very last tick. Pawns you are not looking at are only updated every few ticks, so most of the time the drill looks unused. Depending on timing, a drill out of view may never cause an infestation at all. With this fix the drill counts as in use while someone works it. Off by default because it makes drilling more dangerous.</VBF_DrillInfestationCheckTip>
@@ -146,4 +146,5 @@
 	<VBF_AreaInvertUpdate>Inverted areas work at once</VBF_AreaInvertUpdate>
 	<VBF_AreaInvertUpdateTip>The invert button in the area manager doesn't tell the pathfinder or the region data that every cell has changed. Pawns restricted to that area can keep acting as if the old shape was still there until you reload. With this fix the change is reported for every cell.</VBF_AreaInvertUpdateTip>
 	<VBF_AreaInvertUpdateStats>Active. Updated the pathing data for {0} inverted areas since the game was started.</VBF_AreaInvertUpdateStats>
+
 </LanguageData>
