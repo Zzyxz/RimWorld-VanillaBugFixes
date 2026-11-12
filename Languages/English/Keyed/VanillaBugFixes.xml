@@ -155,4 +155,8 @@
 	<VBF_GrowthSexualityTip>With Biotech, children don't get a sexuality trait when they are generated. They get the chance at 13, as part of the growth letter. Children you get no letter for, such as prisoners, guests and children of other factions, skip this step and can never become gay, bisexual or asexual. With this fix they get the same roll when they turn 13.</VBF_GrowthSexualityTip>
 	<VBF_GrowthSexualityStats>Active. Rolled a sexuality for {0} teenagers since the game was started.</VBF_GrowthSexualityStats>
 
+	<VBF_InventoryKeepList>Pack animals unload what they should</VBF_InventoryKeepList>
+	<VBF_InventoryKeepListTip>When a pawn's inventory gets unloaded, the game builds a list of things the pawn may keep, like drugs from its drug policy or medicine from its inventory settings. That list is only reset for pawns with a drug policy. Pack animals, guests and other pawns without one check their items against the list of the last colonist instead. A pack animal can then hold on to drugs or medicine nobody asked it to keep. With this fix the list starts empty for every pawn.</VBF_InventoryKeepListTip>
+	<VBF_InventoryKeepListStats>Active. Cleared a leftover list {0} times since the game was started.</VBF_InventoryKeepListStats>
+
 </LanguageData>
