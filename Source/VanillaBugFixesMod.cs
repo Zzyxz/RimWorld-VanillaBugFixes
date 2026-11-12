@@ -105,6 +105,7 @@ public class VanillaBugFixesMod : Mod
         new HistoryGoodwillTrimFix(),
         new TaleIgnoreRollFix(),
         new AreaInvertUpdateFix(),
+        new GrowthTraitSkillsFix(),
     };
 
     private Vector2 scroll;
