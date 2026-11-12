@@ -151,4 +151,8 @@
 	<VBF_GrowthTraitSkillsTip>When you pick a new trait in a child's growth letter, the game also adds the skill bonuses of that trait. Brawler gives +4 Melee and -10 Shooting, for example. Children you get no letter for, such as prisoners, guests and children of other factions, get a trait picked for them. For those the game forgets the skill bonuses. With this fix they get them too.</VBF_GrowthTraitSkillsTip>
 	<VBF_GrowthTraitSkillsStats>Active. Added trait skill bonuses {0} times since the game was started.</VBF_GrowthTraitSkillsStats>
 
+	<VBF_GrowthSexuality>Children without a growth letter get a sexuality at 13</VBF_GrowthSexuality>
+	<VBF_GrowthSexualityTip>With Biotech, children don't get a sexuality trait when they are generated. They get the chance at 13, as part of the growth letter. Children you get no letter for, such as prisoners, guests and children of other factions, skip this step and can never become gay, bisexual or asexual. With this fix they get the same roll when they turn 13.</VBF_GrowthSexualityTip>
+	<VBF_GrowthSexualityStats>Active. Rolled a sexuality for {0} teenagers since the game was started.</VBF_GrowthSexualityStats>
+
 </LanguageData>

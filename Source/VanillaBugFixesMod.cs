@@ -106,6 +106,7 @@ public class VanillaBugFixesMod : Mod
         new TaleIgnoreRollFix(),
         new AreaInvertUpdateFix(),
         new GrowthTraitSkillsFix(),
+        new GrowthSexualityFix(),
     };
 
     private Vector2 scroll;
