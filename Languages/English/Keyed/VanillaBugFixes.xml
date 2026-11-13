@@ -159,4 +159,8 @@
 	<VBF_InventoryKeepListTip>When a pawn's inventory gets unloaded, the game builds a list of things the pawn may keep, like drugs from its drug policy or medicine from its inventory settings. That list is only reset for pawns with a drug policy. Pack animals, guests and other pawns without one check their items against the list of the last colonist instead. A pack animal can then hold on to drugs or medicine nobody asked it to keep. With this fix the list starts empty for every pawn.</VBF_InventoryKeepListTip>
 	<VBF_InventoryKeepListStats>Active. Cleared a leftover list {0} times since the game was started.</VBF_InventoryKeepListStats>
 
+	<VBF_CrateMultiOpen>Opening crates with several pawns selected</VBF_CrateMultiOpen>
+	<VBF_CrateMultiOpenTip>With one pawn selected, right-clicking a crate and choosing Open works. With several pawns selected the first pawn gets an open order that still needs the open marker on the crate. Without the marker the order is dropped at once while the other pawns walk over for nothing. With this fix the order works the same way as with one pawn.</VBF_CrateMultiOpenTip>
+	<VBF_CrateMultiOpenStats>Active. Fixed {0} open orders since the game was started.</VBF_CrateMultiOpenStats>
+
 </LanguageData>
