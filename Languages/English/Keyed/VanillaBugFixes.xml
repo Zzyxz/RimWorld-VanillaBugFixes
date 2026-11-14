@@ -25,7 +25,7 @@
 	<VBF_JobClearTip>The game reuses old job objects but forgets to reset four of their fields. A pawn can then carry over leftovers from an earlier job, for example a hauler whose "Carrying:" line is missing after someone read a book. This fix resets those fields.</VBF_JobClearTip>
 
 	<VBF_PrioritySorter>Fair tie-breaks between needs</VBF_PrioritySorter>
-	<VBF_PrioritySorterTip>When two needs have the same priority, the game is meant to pick one at random. An off-by-one error means the first entries of a list can never win such a tie. For example a hungry parent always eats before feeding their baby. This fix makes the pick random as intended.</VBF_PrioritySorterTip>
+	<VBF_PrioritySorterTip>When two needs have the same priority, the game is meant to pick one at random. An off-by-one error means the first two entries of a list can never win such a tie. For example a prisoner always eats before feeding their baby. A pawn stuck in bed always meditates instead of finding other fun. This fix makes the pick random as intended.</VBF_PrioritySorterTip>
 
 	<VBF_TrainFoodOrder>Handlers wait for training cooldown before fetching food</VBF_TrainFoodOrder>
 	<VBF_TrainFoodOrderTip>Handlers fetch food for training before checking whether the animal can be trained again yet. Taming already checks in the right order. With this fix handlers only fetch food when the animal is ready.</VBF_TrainFoodOrderTip>
@@ -46,10 +46,10 @@
 	<VBF_PermitReadyMessageTip>When a royal permit's cooldown ends, the game shows a message. It only checks one exact moment. Pawns are not updated every single moment, so the message is missing most of the time. The permit itself always becomes usable. With this fix the message shows up while the pawn is on a map. If the cooldown ends during a caravan trip, there is still no message.</VBF_PermitReadyMessageTip>
 
 	<VBF_BookRewards>Books can show up as quest rewards</VBF_BookRewards>
-	<VBF_BookRewardsTip>Quest rewards, item stashes and peace talks are meant to include books now and then. The check for books was copied from techprints and never changed. So books only show up while a techprint is still on offer: never without Royalty, never from tribes or pirates, never once all techprints are done. With this fix books only need to fit the reward value, like other rewards.</VBF_BookRewardsTip>
+	<VBF_BookRewardsTip>Quest rewards, item stashes and peace talks are meant to include books now and then. The check for books was copied from techprints and never changed. So books only show up while a techprint is still on offer. That means never without Royalty, never from tribes or pirates and never once all techprints are done. With this fix books can show up whenever the cheapest book fits the reward value.</VBF_BookRewardsTip>
 
 	<VBF_SowNeighborProtect>Growers respect "allow cutting" next door</VBF_SowNeighborProtect>
-	<VBF_SowNeighborProtectTip>Some plants, like trees, block sowing on the cells around them. When a grower wants to sow next to such a plant, the game checks whether the plant may be cut. For plants in a neighboring growing zone this check never works: a zone with cutting switched off still loses its trees or old crops to the sowing next door. With this fix a growing zone with cutting off keeps all its plants, the same as it already does for its own cells.</VBF_SowNeighborProtectTip>
+	<VBF_SowNeighborProtectTip>Some plants, like trees, block sowing on the cells around them. When a grower wants to sow next to such a plant, the game checks whether the plant may be cut. For plants in a neighboring growing zone this check never works. A zone with cutting switched off still loses its trees or old crops to the sowing next door. With this fix a growing zone with cutting off keeps all its plants, the same as it already does for its own cells.</VBF_SowNeighborProtectTip>
 
 	<VBF_DrillInfestationCheck>Deep drill infestations work off screen (changes gameplay)</VBF_DrillInfestationCheck>
 	<VBF_DrillInfestationCheckTip>A deep drill that is in use can draw insects from below. The game only counts the drill as in use if it was worked on in the very last tick. Pawns you are not looking at are only updated every few ticks, so most of the time the drill looks unused. Depending on timing, a drill out of view may never cause an infestation at all. With this fix the drill counts as in use while someone works it. Off by default because it makes drilling more dangerous.</VBF_DrillInfestationCheckTip>
@@ -58,7 +58,7 @@
 	<VBF_EmpBatteryDischargeTip>A battery hit by EMP is meant to be cut off from its power grid until it recovers. The game leaves it out when it counts the stored power. When the grid then draws power, the stunned battery still gives its share as long as another battery is charged. With this fix only working batteries are drained.</VBF_EmpBatteryDischargeTip>
 
 	<VBF_BookQuestTiming>Quest books work off screen</VBF_BookQuestTiming>
-	<VBF_BookQuestTimingTip>Some Odyssey books hide a quest that a reader can find while reading. Pawns you are not looking at are only updated every few ticks. Everything else a book does counts the time that passed, but the quest check only counts one tick. Out of view a reader could take up to 15 times longer to find the quest. With this fix the quest check counts the reading time like the rest of the book.</VBF_BookQuestTimingTip>
+	<VBF_BookQuestTimingTip>With Odyssey, some books hide a quest that a reader can find while reading. Pawns you are not looking at are only updated every few ticks. Everything else a book does counts the time that passed, but the quest check only counts one tick. Out of view a reader could take up to 15 times longer to find the quest. With this fix the quest check counts the reading time like the rest of the book.</VBF_BookQuestTimingTip>
 
 	<VBF_SnowTotalAfterLoad>Snow is still there after loading</VBF_SnowTotalAfterLoad>
 	<VBF_SnowTotalAfterLoadTip>The game keeps a running total of all snow on a map. That total is not saved, so it starts at zero after every load while the snow itself is still there. Colonists then won't build snowmen until enough new snow has fallen. The faint shadow behind map labels on snowy maps is missing too. With this fix the total is counted again from the snow on the map when a save is loaded.</VBF_SnowTotalAfterLoadTip>
@@ -84,13 +84,13 @@
 	<VBF_ImplantRemovalTip>Some implants can sit on both sides of the body, like an elbow blade in each arm. When you order the removal of one the game takes the first matching implant on the pawn without checking which body part you picked. With this fix the chosen one is removed.</VBF_ImplantRemovalTip>
 
 	<VBF_SuppressionXp>Suppression gives full skill experience</VBF_SuppressionXp>
-	<VBF_SuppressionXpTip>A pawn who suppresses an anomaly earns intellectual experience with every update. Pawns you aren't looking at are updated every 15 ticks but still get the experience of a single tick. They learn only a fifteenth of what they would on screen. With this fix the experience counts all the ticks.</VBF_SuppressionXpTip>
+	<VBF_SuppressionXpTip>A pawn who suppresses an anomaly earns intellectual experience with every update. Pawns are updated less often the further you zoom out. Pawns you aren't looking at are only updated every 15 ticks. Each update still gives the experience of a single tick, so they learn up to 15 times less. With this fix the experience counts all the ticks.</VBF_SuppressionXpTip>
 
 	<VBF_TerrorRemoval>Slaves forget all terror</VBF_TerrorRemoval>
-	<VBF_TerrorRemovalTip>Slaves get terror thoughts from what they see around them. When they lose sight of it the game removes those thoughts while walking through the list, which skips every second one. Some terror then lingers for up to a day and keeps the suppression value off. With this fix the whole list is removed.</VBF_TerrorRemovalTip>
+	<VBF_TerrorRemovalTip>Slaves get terror thoughts from what they see around them. When they lose sight of it the game removes those thoughts while walking through the list, which skips every second one. Some terror then stays until the next time the slave looks around and keeps the suppression value off for that time. With this fix the whole list is removed.</VBF_TerrorRemovalTip>
 
 	<VBF_WaterRaidMap>Water raids arrive on the right map</VBF_WaterRaidMap>
-	<VBF_WaterRaidMapTip>Raiders who rise out of a river or the sea are placed on the map you are looking at. With more than one colony a raid aimed at another colony puts them on the wrong map. With this fix they arrive on the map of the raid.</VBF_WaterRaidMapTip>
+	<VBF_WaterRaidMapTip>Raiders who rise out of a river or the sea are placed on the map you are looking at. If you are looking at another map when the raid comes, like a second colony or a quest site, they end up on the wrong map. With this fix they arrive on the map of the raid.</VBF_WaterRaidMapTip>
 
 	<VBF_MultiAttackTargets>Attack orders reach the right pawns</VBF_MultiAttackTargets>
 	<VBF_MultiAttackTargetsTip>When you select several pawns and right-click a spot with more than one target, the game builds the attack options one after another but keeps a single shared list of pawns. The last target replaces the list of the others, so some pawns get no order. With this fix every option keeps its own list.</VBF_MultiAttackTargetsTip>
@@ -99,13 +99,13 @@
 	<VBF_CaravanPermitCostTip>Royal permits that call a shuttle or supplies to a caravan share one stored value that says whether the call is free. It is overwritten for every titled pawn in the caravan. A button can end up charging or not charging by the rules of another pawn. With this fix each button keeps the value of its own pawn.</VBF_CaravanPermitCostTip>
 
 	<VBF_RoleLossThought>Role changes don't count as a loss</VBF_RoleLossThought>
-	<VBF_RoleLossThoughtTip>When a pawn moves from a role that several pawns can hold to another role the game still gives it the mood penalty for losing a role. Roles that only one pawn can hold don't do that. With this fix the penalty only comes when the role is really taken away.</VBF_RoleLossThoughtTip>
+	<VBF_RoleLossThoughtTip>When a pawn moves from a role that several pawns can hold to another role the game still gives it the mood penalty for losing a role. Roles that only one pawn can hold don't do that. With this fix roles that several pawns can hold give the penalty in the same cases as single roles.</VBF_RoleLossThoughtTip>
 
 	<VBF_HistoryGoodwillTrim>Event history stays in step</VBF_HistoryGoodwillTrim>
 	<VBF_HistoryGoodwillTrimTip>The game remembers the last 20 events of each kind with a time and a goodwill value. Old entries are cut from the list of times but never from the list of goodwill values. After that the two lists no longer match. This skews the recent events shown for a faction and which old entries get cleaned up. With this fix both lists are cut together.</VBF_HistoryGoodwillTrimTip>
 
 	<VBF_TaleIgnoreRoll>Tales are saved as often as planned</VBF_TaleIgnoreRoll>
-	<VBF_TaleIgnoreRollTip>Being hunted, vomiting, being on fire and walking naked should be remembered half of the time. The game rolls the dice twice for them, so only a quarter are remembered. Artwork then has fewer tales to pick from. With this fix it rolls once.</VBF_TaleIgnoreRollTip>
+	<VBF_TaleIgnoreRollTip>Hunting an animal, vomiting, being on fire and walking naked should be remembered half of the time. The game rolls the dice twice for them, so only a quarter are remembered. Artwork then has fewer tales to pick from. With this fix it rolls once.</VBF_TaleIgnoreRollTip>
 
 	<VBF_GrowthTraitSkills>Children without a growth letter get trait skill bonuses</VBF_GrowthTraitSkills>
 	<VBF_GrowthTraitSkillsTip>When you pick a new trait in a child's growth letter, the game also adds the skill bonuses of that trait. Brawler gives +4 Melee and -10 Shooting, for example. Children you get no letter for, such as prisoners, guests and children of other factions, get a trait picked for them. For those the game forgets the skill bonuses. With this fix they get them too.</VBF_GrowthTraitSkillsTip>
