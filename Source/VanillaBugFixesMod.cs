@@ -120,7 +120,7 @@ public class VanillaBugFixesMod : Mod
     {
         var view = new Rect(0f, 0f, inRect.width - 20f, viewHeight);
         Widgets.BeginScrollView(inRect, ref scroll, view);
-        var list = new Listing_Standard();
+        var list = new Listing_Standard { maxOneColumn = true };
         list.Begin(view);
         bool firstGroup = true;
         foreach (var group in Fixes.GroupBy(f => f.Category))
