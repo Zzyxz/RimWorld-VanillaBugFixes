@@ -98,6 +98,7 @@ public class VanillaBugFixesMod : Mod
         new GrowthSexualityFix(),
         new InventoryKeepListFix(),
         new PortalMultiSelectFix(),
+        new MoodThoughtDuplicateFix(),
     };
 
     private Vector2 scroll;

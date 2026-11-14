@@ -121,4 +121,7 @@
 
 	<VBF_PortalMultiSelect>Entering portals with several pawns selected</VBF_PortalMultiSelect>
 	<VBF_PortalMultiSelectTip>When you select several pawns and right-click a portal, like a cave entrance, the game is meant to check each pawn. It checks the first selected pawn every time instead. If that pawn can't get there the option is missing for everyone. If it can, every selected pawn gets the order, even pawns that can't reach the portal or can't use their hands. With this fix each pawn is checked on its own.</VBF_PortalMultiSelectTip>
+
+	<VBF_MoodThoughtDuplicate>Mood thoughts count only once</VBF_MoodThoughtDuplicate>
+	<VBF_MoodThoughtDuplicateTip>Some mood thoughts come from the current situation, like being naked or wearing tattered clothes. The alerts on the right check these thoughts on their own. When such a thought comes back after it went away, that check can add a second copy. Both copies then count, so the mood penalty is about 1.75 times as strong. Each repeat adds another copy until something resets the pawn's thoughts, like a new injury. With Ideology only tattered clothes are affected. With this fix the check uses the thought that is already there.</VBF_MoodThoughtDuplicateTip>
 </LanguageData>
