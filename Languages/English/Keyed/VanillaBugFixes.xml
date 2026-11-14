@@ -107,9 +107,6 @@
 	<VBF_TaleIgnoreRoll>Tales are saved as often as planned</VBF_TaleIgnoreRoll>
 	<VBF_TaleIgnoreRollTip>Being hunted, vomiting, being on fire and walking naked should be remembered half of the time. The game rolls the dice twice for them, so only a quarter are remembered. Artwork then has fewer tales to pick from. With this fix it rolls once.</VBF_TaleIgnoreRollTip>
 
-	<VBF_AreaInvertUpdate>Inverted areas work at once</VBF_AreaInvertUpdate>
-	<VBF_AreaInvertUpdateTip>The invert button in the area manager doesn't tell the pathfinder or the region data that every cell has changed. Pawns restricted to that area can keep acting as if the old shape was still there until you reload. With this fix the change is reported for every cell.</VBF_AreaInvertUpdateTip>
-
 	<VBF_GrowthTraitSkills>Children without a growth letter get trait skill bonuses</VBF_GrowthTraitSkills>
 	<VBF_GrowthTraitSkillsTip>When you pick a new trait in a child's growth letter, the game also adds the skill bonuses of that trait. Brawler gives +4 Melee and -10 Shooting, for example. Children you get no letter for, such as prisoners, guests and children of other factions, get a trait picked for them. For those the game forgets the skill bonuses. With this fix they get them too.</VBF_GrowthTraitSkillsTip>
 

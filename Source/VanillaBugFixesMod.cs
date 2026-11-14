@@ -93,7 +93,6 @@ public class VanillaBugFixesMod : Mod
         new RoleLossThoughtFix(),
         new HistoryGoodwillTrimFix(),
         new TaleIgnoreRollFix(),
-        new AreaInvertUpdateFix(),
         new GrowthTraitSkillsFix(),
         new GrowthSexualityFix(),
         new InventoryKeepListFix(),
