@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace VanillaBugFixes;
 public class HaulSourceCheckFix : Fix
 {
     private static HaulSourceCheckFix instance;
-    private static AccessTools.FieldRef<int> cycleIndex;
+    private static readonly ConditionalWeakTable<ListerHaulables, StrongBox<int>> cycles = new();
 
     public override string Id => "HaulSourceCheck";
 
@@ -18,8 +19,6 @@ public class HaulSourceCheckFix : Fix
     protected override void Apply(Harmony harmony)
     {
         instance = this;
-        cycleIndex = AccessTools.StaticFieldRefAccess<int>(AccessTools.Field(typeof(ListerHaulables), "groupCycleIndex")
-            ?? throw new System.Exception("ListerHaulables.groupCycleIndex not found"));
         harmony.Patch(AccessTools.DeclaredMethod(typeof(ListerHaulables), "HaulSourcesCheckTick", new[] { typeof(List<IHaulSource>) })
                 ?? throw new System.Exception("ListerHaulables.HaulSourcesCheckTick not found"),
             prefix: new HarmonyMethod(typeof(HaulSourceCheckFix), nameof(Prefix)));
@@ -35,8 +34,10 @@ public class HaulSourceCheckFix : Fix
         {
             return false;
         }
+        StrongBox<int> cycle = cycles.GetValue(__instance, _ => new StrongBox<int>());
+        cycle.Value = cycle.Value >= int.MaxValue - 1 ? 0 : cycle.Value + 1;
         int groups = Mathf.CeilToInt(haulList.Count / 4f);
-        int start = cycleIndex() % groups * 4;
+        int start = cycle.Value % groups * 4;
         for (int i = 0; i < 4 && start + i < haulList.Count; i++)
         {
             IHaulSource source = haulList[start + i];
