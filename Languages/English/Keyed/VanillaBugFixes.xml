@@ -163,4 +163,7 @@
 	<VBF_CrateMultiOpenTip>With one pawn selected, right-clicking a crate and choosing Open works. With several pawns selected the first pawn gets an open order that still needs the open marker on the crate. Without the marker the order is dropped at once while the other pawns walk over for nothing. With this fix the order works the same way as with one pawn.</VBF_CrateMultiOpenTip>
 	<VBF_CrateMultiOpenStats>Active. Fixed {0} open orders since the game was started.</VBF_CrateMultiOpenStats>
 
+	<VBF_PortalMultiSelect>Entering portals with several pawns selected</VBF_PortalMultiSelect>
+	<VBF_PortalMultiSelectTip>When you select several pawns and right-click a portal, like a cave entrance, the game is meant to check each pawn. It checks the first selected pawn every time instead. If that pawn can't get there the option is missing for everyone. If it can, every selected pawn gets the order, even pawns that can't reach the portal or can't use their hands. With this fix each pawn is checked on its own.</VBF_PortalMultiSelectTip>
+	<VBF_PortalMultiSelectStats>Active. Checked {0} selected pawns on their own since the game was started.</VBF_PortalMultiSelectStats>
 </LanguageData>

@@ -109,6 +109,7 @@ public class VanillaBugFixesMod : Mod
         new GrowthSexualityFix(),
         new InventoryKeepListFix(),
         new CrateMultiOpenFix(),
+        new PortalMultiSelectFix(),
     };
 
     private Vector2 scroll;
