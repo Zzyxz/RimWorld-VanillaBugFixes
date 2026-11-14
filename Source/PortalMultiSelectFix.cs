@@ -12,8 +12,6 @@ public class PortalMultiSelectFix : Fix
 {
     private static PortalMultiSelectFix instance;
 
-    private int corrected;
-
     public override string Id => "PortalMultiSelect";
 
     public override string Category => "VBF_CategoryJobs";
@@ -61,17 +59,6 @@ public class PortalMultiSelectFix : Fix
         {
             return firstSelected;
         }
-        if (pawn != firstSelected)
-        {
-            instance.corrected++;
-        }
         return pawn;
-    }
-
-    public override string Stats() => "VBF_PortalMultiSelectStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

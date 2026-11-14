@@ -8,8 +8,6 @@ public class ShuttleHealthSaveFix : Fix
 {
     private static ShuttleHealthSaveFix instance;
 
-    private int corrected;
-
     public override string Id => "ShuttleHealthSave";
 
     public override string Category => "VBF_CategorySaves";
@@ -29,16 +27,5 @@ public class ShuttleHealthSaveFix : Fix
             return;
         }
         Scribe_Values.Look(ref __instance.onlyAcceptHealthy, "onlyAcceptHealthy", false);
-        if (Scribe.mode == LoadSaveMode.LoadingVars && __instance.onlyAcceptHealthy)
-        {
-            instance.corrected++;
-        }
-    }
-
-    public override string Stats() => "VBF_ShuttleHealthSaveStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<VBF_Intro>Every fix can be switched on and off on its own. No restart is needed. Most fixes take effect at once. Fixes for saved data work the next time a save is loaded. A fix that cannot work in your game (another mod changes the same code) switches itself off and tells you why here.</VBF_Intro>
-	<VBF_Active>Active.</VBF_Active>
-	<VBF_SwitchedOff>Switched off.</VBF_SwitchedOff>
-	<VBF_NotActive>Not active: {0}</VBF_NotActive>
-	<VBF_ResetStats>Reset counters</VBF_ResetStats>
-
 	<VBF_CategoryCombat>Combat</VBF_CategoryCombat>
 	<VBF_CategoryJobs>Jobs and AI</VBF_CategoryJobs>
 	<VBF_CategoryAnimals>Animals</VBF_CategoryAnimals>
@@ -17,18 +11,15 @@
 
 	<VBF_StaggerStart>First stagger at the right speed</VBF_StaggerStart>
 	<VBF_StaggerStartTip>The first time a pawn gets staggered, the base game slows it to almost nothing instead of 17 % speed. With this fix every stagger uses the speed it was meant to have. Modded races with their own stagger speed also get their value.</VBF_StaggerStartTip>
-	<VBF_StaggerStartStats>Active. Corrected {0} staggers since the game was started.</VBF_StaggerStartStats>
 
 	<VBF_PanicFlee>Badly hurt enemies can flee (changes gameplay)</VBF_PanicFlee>
 	<VBF_PanicFleeTip>The base game is meant to let a badly hurt raider or visitor run away on their own. Each pawn has a personal limit somewhere between never and 39 % health. A math error puts that limit below zero for every pawn, so nobody ever flees from their wounds. With this fix about half of all human enemies will try to flee once they are hurt badly enough. Off by default because fights play out differently. Mods with their own flee rules, like RimPsyche Disposition, can replace this check. Then this fix has nothing to do.</VBF_PanicFleeTip>
-	<VBF_PanicFleeStats>Active. Corrected {0} flee checks since the game was started.</VBF_PanicFleeStats>
 
 	<VBF_ShieldDomeReach>Shields catch shots you're not looking at</VBF_ShieldDomeReach>
 	<VBF_ShieldDomeReachTip>Shots that are off screen move in bigger steps to save time. Shield domes only check where a step ends, so a shot can jump right over a small shield. Whether a mech shield, a Legionary or a low shield stops a bullet then depends on where your camera is. With this fix shields check the whole step.</VBF_ShieldDomeReachTip>
 
 	<VBF_MeleeDamageTotal>Melee hits count all their damage</VBF_MeleeDamageTotal>
 	<VBF_MeleeDamageTotalTip>Some melee weapons deal extra damage on top of the main hit, like the EMP of a zeushammer or the flame of a plasma sword. The game then only looks at the last part of the hit. Hitting a slave with a zeushammer gives no suppression at all. Some hits also drop out of the combat log. With this fix the whole hit counts.</VBF_MeleeDamageTotalTip>
-	<VBF_MeleeDamageTotalStats>Active. Counted {0} hits with extra damage since the game was started.</VBF_MeleeDamageTotalStats>
 
 	<VBF_JobClear>Clean up reused jobs</VBF_JobClear>
 	<VBF_JobClearTip>The game reuses old job objects but forgets to reset four of their fields. A pawn can then carry over leftovers from an earlier job, for example a hauler whose "Carrying:" line is missing after someone read a book. This fix resets those fields.</VBF_JobClearTip>
@@ -38,132 +29,99 @@
 
 	<VBF_TrainFoodOrder>Handlers wait for training cooldown before fetching food</VBF_TrainFoodOrder>
 	<VBF_TrainFoodOrderTip>Handlers fetch food for training before checking whether the animal can be trained again yet. Taming already checks in the right order. With this fix handlers only fetch food when the animal is ready.</VBF_TrainFoodOrderTip>
-	<VBF_TrainFoodOrderStats>Active. Stopped {0} early food trips since the game was started.</VBF_TrainFoodOrderStats>
 
 	<VBF_PlaceRadius>Map features spread out as planned</VBF_PlaceRadius>
 	<VBF_PlaceRadiusTip>When the game builds some map features, it means to scatter things over a small area. A setting gets lost on the way, so everything has to fit into a tiny spot. Insect caves (Odyssey) then never get more than 5 cocoons or egg sacs. The loot in the boss room is often missing too. Anomaly's undercave piles are capped too. With this fix new maps get the planned amounts. Insect caves get harder at high threat, as intended.</VBF_PlaceRadiusTip>
-	<VBF_PlaceRadiusStats>Active. Widened the area for {0} placements since the game was started.</VBF_PlaceRadiusStats>
 
 	<VBF_SettlementInhabitants>Settlements keep their people</VBF_SettlementInhabitants>
 	<VBF_SettlementInhabitantsTip>The base game is meant to remember who lives in a faction base, so the people you meet there can show up again on your next visit. A reversed check means it never stores anyone. With this fix bases remember their residents. Who is still alive and free can come back, the rest is replaced as usual.</VBF_SettlementInhabitantsTip>
-	<VBF_SettlementInhabitantsStats>Active. Corrected {0} resident checks since the game was started.</VBF_SettlementInhabitantsStats>
 
 	<VBF_RoyalAscentRefire>Royal Ascent comes back after failing</VBF_RoyalAscentRefire>
 	<VBF_RoyalAscentRefireTip>If the Royal Ascent quest fails, the game offers it again 22 days later. It is meant to look at the newest attempt, but it stops at the oldest one. So the quest comes back only once. Fail the second try and it never returns. With this fix the timer always follows the newest attempt.</VBF_RoyalAscentRefireTip>
-	<VBF_RoyalAscentRefireStats>Active. Used the newest attempt {0} times since the game was started.</VBF_RoyalAscentRefireStats>
 
 	<VBF_RefugeeFaction>Downed refugees can belong to a faction</VBF_RefugeeFaction>
 	<VBF_RefugeeFactionTip>Refugees from the "rescue a downed refugee" quest are meant to come from one of the world's factions most of the time, like refugees from crashed pods. Two values are swapped, so they never belong to any faction. With this fix the quest uses the same 60 % chance as the rest of the game.</VBF_RefugeeFactionTip>
-	<VBF_RefugeeFactionStats>Active. Corrected the faction chance for {0} refugees since the game was started.</VBF_RefugeeFactionStats>
 
 	<VBF_PermitReadyMessage>Message when a royal permit is ready again</VBF_PermitReadyMessage>
 	<VBF_PermitReadyMessageTip>When a royal permit's cooldown ends, the game shows a message. It only checks one exact moment. Pawns are not updated every single moment, so the message is missing most of the time. The permit itself always becomes usable. With this fix the message shows up while the pawn is on a map. If the cooldown ends during a caravan trip, there is still no message.</VBF_PermitReadyMessageTip>
-	<VBF_PermitReadyMessageStats>Active. Showed {0} messages the base game would have missed.</VBF_PermitReadyMessageStats>
 
 	<VBF_BookRewards>Books can show up as quest rewards</VBF_BookRewards>
 	<VBF_BookRewardsTip>Quest rewards, item stashes and peace talks are meant to include books now and then. The check for books was copied from techprints and never changed. So books only show up while a techprint is still on offer: never without Royalty, never from tribes or pirates, never once all techprints are done. With this fix books only need to fit the reward value, like other rewards.</VBF_BookRewardsTip>
-	<VBF_BookRewardsStats>Active. Made {0} book rewards the base game would have skipped.</VBF_BookRewardsStats>
 
 	<VBF_SowNeighborProtect>Growers respect "allow cutting" next door</VBF_SowNeighborProtect>
 	<VBF_SowNeighborProtectTip>Some plants, like trees, block sowing on the cells around them. When a grower wants to sow next to such a plant, the game checks whether the plant may be cut. For plants in a neighboring growing zone this check never works: a zone with cutting switched off still loses its trees or old crops to the sowing next door. With this fix a growing zone with cutting off keeps all its plants, the same as it already does for its own cells.</VBF_SowNeighborProtectTip>
-	<VBF_SowNeighborProtectStats>Active. Blocked sowing next to a protected plant {0} times since the game was started.</VBF_SowNeighborProtectStats>
 
 	<VBF_DrillInfestationCheck>Deep drill infestations work off screen (changes gameplay)</VBF_DrillInfestationCheck>
 	<VBF_DrillInfestationCheckTip>A deep drill that is in use can draw insects from below. The game only counts the drill as in use if it was worked on in the very last tick. Pawns you are not looking at are only updated every few ticks, so most of the time the drill looks unused. Depending on timing, a drill out of view may never cause an infestation at all. With this fix the drill counts as in use while someone works it. Off by default because it makes drilling more dangerous.</VBF_DrillInfestationCheckTip>
-	<VBF_DrillInfestationCheckStats>Active. Counted a drill as in use {0} times the base game would have missed.</VBF_DrillInfestationCheckStats>
 
 	<VBF_EmpBatteryDischarge>Batteries hit by EMP stop giving power</VBF_EmpBatteryDischarge>
 	<VBF_EmpBatteryDischargeTip>A battery hit by EMP is meant to be cut off from its power grid until it recovers. The game leaves it out when it counts the stored power. When the grid then draws power, the stunned battery still gives its share as long as another battery is charged. With this fix only working batteries are drained.</VBF_EmpBatteryDischargeTip>
-	<VBF_EmpBatteryDischargeStats>Active. Left out stunned batteries {0} times since the game was started.</VBF_EmpBatteryDischargeStats>
 
 	<VBF_BookQuestTiming>Quest books work off screen</VBF_BookQuestTiming>
 	<VBF_BookQuestTimingTip>Some Odyssey books hide a quest that a reader can find while reading. Pawns you are not looking at are only updated every few ticks. Everything else a book does counts the time that passed, but the quest check only counts one tick. Out of view a reader could take up to 15 times longer to find the quest. With this fix the quest check counts the reading time like the rest of the book.</VBF_BookQuestTimingTip>
-	<VBF_BookQuestTimingStats>Active. Counted the full reading time {0} times since the game was started.</VBF_BookQuestTimingStats>
 
 	<VBF_SnowTotalAfterLoad>Snow is still there after loading</VBF_SnowTotalAfterLoad>
 	<VBF_SnowTotalAfterLoadTip>The game keeps a running total of all snow on a map. That total is not saved, so it starts at zero after every load while the snow itself is still there. Colonists then won't build snowmen until enough new snow has fallen. The faint shadow behind map labels on snowy maps is missing too. With this fix the total is counted again from the snow on the map when a save is loaded.</VBF_SnowTotalAfterLoadTip>
-	<VBF_SnowTotalAfterLoadStats>Active. Counted the snow again on {0} loaded maps since the game was started.</VBF_SnowTotalAfterLoadStats>
 	<VBF_ChildShamblersSave>Child shambler setting is saved</VBF_ChildShamblersSave>
 	<VBF_ChildShamblersSaveTip>The custom difficulty option for child shamblers is never written to the save file. If you turn it off it comes back on after the next load. Dead children can then rise again. With this fix the setting is saved like the others.</VBF_ChildShamblersSaveTip>
-	<VBF_ChildShamblersSaveStats>Active. Loaded {0} saves with the option turned off since the game was started.</VBF_ChildShamblersSaveStats>
 
 	<VBF_AnomalyIncidentSave>Monolith events survive saving</VBF_AnomalyIncidentSave>
 	<VBF_AnomalyIncidentSaveTip>When the monolith reaches a new level the game waits 12 to 36 hours before it sends the event that belongs to that level. The wait is not saved. If you save and load in between the event never comes. With this fix the wait is saved.</VBF_AnomalyIncidentSaveTip>
-	<VBF_AnomalyIncidentSaveStats>Active. Brought back a waiting event {0} times since the game was started.</VBF_AnomalyIncidentSaveStats>
 
 	<VBF_ShuttleHealthSave>Lending shuttle keeps its health check</VBF_ShuttleHealthSave>
 	<VBF_ShuttleHealthSaveTip>The shuttle that picks up lent colonists should only take pawns who are healthy enough. It forgets that rule when the game is saved and loaded. After that it also takes pawns who are downed or can't use their hands. With this fix the rule is saved.</VBF_ShuttleHealthSaveTip>
-	<VBF_ShuttleHealthSaveStats>Active. Kept the rule on {0} shuttles after loading since the game was started.</VBF_ShuttleHealthSaveStats>
 
 	<VBF_ConcertSpot>Concerts use the best instrument</VBF_ConcertSpot>
 	<VBF_ConcertSpotTip>A concert should happen at the instrument with the longest range. If several are equal the game picks one at random. A counter in the code is never updated, so the game just takes whichever usable instrument comes last in its list. With this fix the best instrument wins.</VBF_ConcertSpotTip>
-	<VBF_ConcertSpotStats>Active. Picked the concert spot {0} times since the game was started.</VBF_ConcertSpotStats>
 
 	<VBF_WeddingGuests>Wedding guests check the right spouse count</VBF_WeddingGuests>
 	<VBF_WeddingGuestsTip>Whether a guest is willing to come to a wedding depends on how many spouses each partner already has. For the second partner the game counts the spouses of the first one instead. You only notice this when partners have different numbers of spouses (Ideology). With this fix each partner is counted on their own.</VBF_WeddingGuestsTip>
-	<VBF_WeddingGuestsStats>Active. Corrected the count for {0} weddings since the game was started.</VBF_WeddingGuestsStats>
 
 	<VBF_HaulSourceCheck>Bookcases and outfit stands get rechecked</VBF_HaulSourceCheck>
 	<VBF_HaulSourceCheckTip>The game keeps rechecking bookcases and outfit stands for items that should be moved elsewhere. A wrong index means the later ones in the list are never reached once you have more than five. A book in an old bookcase then isn't found when you change the storage priority somewhere else. With this fix all of them are rechecked in turn.</VBF_HaulSourceCheckTip>
-	<VBF_HaulSourceCheckStats>Active. Rechecked {0} bookcases or stands that would have been skipped since the game was started.</VBF_HaulSourceCheckStats>
 
 	<VBF_ImplantRemoval>Removing an implant takes the chosen one</VBF_ImplantRemoval>
 	<VBF_ImplantRemovalTip>Some implants can sit on both sides of the body, like an elbow blade in each arm. When you order the removal of one the game takes the first matching implant on the pawn without checking which body part you picked. With this fix the chosen one is removed.</VBF_ImplantRemovalTip>
-	<VBF_ImplantRemovalStats>Active. Removed a different implant than the game would have {0} times since the game was started.</VBF_ImplantRemovalStats>
 
 	<VBF_SuppressionXp>Suppression gives full skill experience</VBF_SuppressionXp>
 	<VBF_SuppressionXpTip>A pawn who suppresses an anomaly earns intellectual experience with every update. Pawns you aren't looking at are updated every 15 ticks but still get the experience of a single tick. They learn only a fifteenth of what they would on screen. With this fix the experience counts all the ticks.</VBF_SuppressionXpTip>
-	<VBF_SuppressionXpStats>Active. Added the missing experience {0} times since the game was started.</VBF_SuppressionXpStats>
 
 	<VBF_TerrorRemoval>Slaves forget all terror</VBF_TerrorRemoval>
 	<VBF_TerrorRemovalTip>Slaves get terror thoughts from what they see around them. When they lose sight of it the game removes those thoughts while walking through the list, which skips every second one. Some terror then lingers for up to a day and keeps the suppression value off. With this fix the whole list is removed.</VBF_TerrorRemovalTip>
-	<VBF_TerrorRemovalStats>Active. Removed the skipped thoughts {0} times since the game was started.</VBF_TerrorRemovalStats>
 
 	<VBF_WaterRaidMap>Water raids arrive on the right map</VBF_WaterRaidMap>
 	<VBF_WaterRaidMapTip>Raiders who rise out of a river or the sea are placed on the map you are looking at. With more than one colony a raid aimed at another colony puts them on the wrong map. With this fix they arrive on the map of the raid.</VBF_WaterRaidMapTip>
-	<VBF_WaterRaidMapStats>Active. Sent {0} raids to the right map since the game was started.</VBF_WaterRaidMapStats>
 
 	<VBF_MultiAttackTargets>Attack orders reach the right pawns</VBF_MultiAttackTargets>
 	<VBF_MultiAttackTargetsTip>When you select several pawns and right-click a spot with more than one target, the game builds the attack options one after another but keeps a single shared list of pawns. The last target replaces the list of the others, so some pawns get no order. With this fix every option keeps its own list.</VBF_MultiAttackTargetsTip>
-	<VBF_MultiAttackTargetsStats>Active. Used the right pawn list {0} times since the game was started.</VBF_MultiAttackTargetsStats>
 
 	<VBF_CaravanPermitCost>Caravan permit buttons keep their own cost</VBF_CaravanPermitCost>
 	<VBF_CaravanPermitCostTip>Royal permits that call a shuttle or supplies to a caravan share one stored value that says whether the call is free. It is overwritten for every titled pawn in the caravan. A button can end up charging or not charging by the rules of another pawn. With this fix each button keeps the value of its own pawn.</VBF_CaravanPermitCostTip>
-	<VBF_CaravanPermitCostStats>Active. Used the right cost {0} times since the game was started.</VBF_CaravanPermitCostStats>
 
 	<VBF_RoleLossThought>Role changes don't count as a loss</VBF_RoleLossThought>
 	<VBF_RoleLossThoughtTip>When a pawn moves from a role that several pawns can hold to another role the game still gives it the mood penalty for losing a role. Roles that only one pawn can hold don't do that. With this fix the penalty only comes when the role is really taken away.</VBF_RoleLossThoughtTip>
-	<VBF_RoleLossThoughtStats>Active. Skipped the penalty {0} times since the game was started.</VBF_RoleLossThoughtStats>
 
 	<VBF_HistoryGoodwillTrim>Event history stays in step</VBF_HistoryGoodwillTrim>
 	<VBF_HistoryGoodwillTrimTip>The game remembers the last 20 events of each kind with a time and a goodwill value. Old entries are cut from the list of times but never from the list of goodwill values. After that the two lists no longer match. This skews the recent events shown for a faction and which old entries get cleaned up. With this fix both lists are cut together.</VBF_HistoryGoodwillTrimTip>
-	<VBF_HistoryGoodwillTrimStats>Active. Trimmed the lists {0} times since the game was started.</VBF_HistoryGoodwillTrimStats>
 
 	<VBF_TaleIgnoreRoll>Tales are saved as often as planned</VBF_TaleIgnoreRoll>
 	<VBF_TaleIgnoreRollTip>Being hunted, vomiting, being on fire and walking naked should be remembered half of the time. The game rolls the dice twice for them, so only a quarter are remembered. Artwork then has fewer tales to pick from. With this fix it rolls once.</VBF_TaleIgnoreRollTip>
-	<VBF_TaleIgnoreRollStats>Active. Rolled once for {0} tales since the game was started.</VBF_TaleIgnoreRollStats>
 
 	<VBF_AreaInvertUpdate>Inverted areas work at once</VBF_AreaInvertUpdate>
 	<VBF_AreaInvertUpdateTip>The invert button in the area manager doesn't tell the pathfinder or the region data that every cell has changed. Pawns restricted to that area can keep acting as if the old shape was still there until you reload. With this fix the change is reported for every cell.</VBF_AreaInvertUpdateTip>
-	<VBF_AreaInvertUpdateStats>Active. Updated the pathing data for {0} inverted areas since the game was started.</VBF_AreaInvertUpdateStats>
 
 	<VBF_GrowthTraitSkills>Children without a growth letter get trait skill bonuses</VBF_GrowthTraitSkills>
 	<VBF_GrowthTraitSkillsTip>When you pick a new trait in a child's growth letter, the game also adds the skill bonuses of that trait. Brawler gives +4 Melee and -10 Shooting, for example. Children you get no letter for, such as prisoners, guests and children of other factions, get a trait picked for them. For those the game forgets the skill bonuses. With this fix they get them too.</VBF_GrowthTraitSkillsTip>
-	<VBF_GrowthTraitSkillsStats>Active. Added trait skill bonuses {0} times since the game was started.</VBF_GrowthTraitSkillsStats>
 
 	<VBF_GrowthSexuality>Children without a growth letter get a sexuality at 13</VBF_GrowthSexuality>
 	<VBF_GrowthSexualityTip>With Biotech, children don't get a sexuality trait when they are generated. They get the chance at 13, as part of the growth letter. Children you get no letter for, such as prisoners, guests and children of other factions, skip this step and can never become gay, bisexual or asexual. With this fix they get the same roll when they turn 13.</VBF_GrowthSexualityTip>
-	<VBF_GrowthSexualityStats>Active. Rolled a sexuality for {0} teenagers since the game was started.</VBF_GrowthSexualityStats>
 
 	<VBF_InventoryKeepList>Pack animals unload what they should</VBF_InventoryKeepList>
 	<VBF_InventoryKeepListTip>When a pawn's inventory gets unloaded, the game builds a list of things the pawn may keep, like drugs from its drug policy or medicine from its inventory settings. That list is only reset for pawns with a drug policy. Pack animals, guests and other pawns without one check their items against the list of the last colonist instead. A pack animal can then hold on to drugs or medicine nobody asked it to keep. With this fix the list starts empty for every pawn.</VBF_InventoryKeepListTip>
-	<VBF_InventoryKeepListStats>Active. Cleared a leftover list {0} times since the game was started.</VBF_InventoryKeepListStats>
 
 	<VBF_CrateMultiOpen>Opening crates with several pawns selected</VBF_CrateMultiOpen>
 	<VBF_CrateMultiOpenTip>With one pawn selected, right-clicking a crate and choosing Open works. With several pawns selected the first pawn gets an open order that still needs the open marker on the crate. Without the marker the order is dropped at once while the other pawns walk over for nothing. With this fix the order works the same way as with one pawn.</VBF_CrateMultiOpenTip>
-	<VBF_CrateMultiOpenStats>Active. Fixed {0} open orders since the game was started.</VBF_CrateMultiOpenStats>
 
 	<VBF_PortalMultiSelect>Entering portals with several pawns selected</VBF_PortalMultiSelect>
 	<VBF_PortalMultiSelectTip>When you select several pawns and right-click a portal, like a cave entrance, the game is meant to check each pawn. It checks the first selected pawn every time instead. If that pawn can't get there the option is missing for everyone. If it can, every selected pawn gets the order, even pawns that can't reach the portal or can't use their hands. With this fix each pawn is checked on its own.</VBF_PortalMultiSelectTip>
-	<VBF_PortalMultiSelectStats>Active. Checked {0} selected pawns on their own since the game was started.</VBF_PortalMultiSelectStats>
 </LanguageData>

@@ -11,8 +11,6 @@ public class SettlementInhabitantsFix : Fix
 {
     private static SettlementInhabitantsFix instance;
 
-    private int remembered;
-
     public override string Id => "SettlementInhabitants";
 
     public override string Category => "VBF_CategoryWorld";
@@ -42,17 +40,6 @@ public class SettlementInhabitantsFix : Fix
         {
             return tileValid;
         }
-        if (tileValid)
-        {
-            instance.remembered++;
-        }
         return !tileValid;
-    }
-
-    public override string Stats() => "VBF_SettlementInhabitantsStats".Translate(remembered);
-
-    public override void ResetStats()
-    {
-        remembered = 0;
     }
 }

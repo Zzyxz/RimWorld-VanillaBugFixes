@@ -10,8 +10,6 @@ public class SnowTotalAfterLoadFix : Fix
     private static AccessTools.FieldRef<SnowGrid, Map> map;
     private static AccessTools.FieldRef<SnowGrid, double> totalDepth;
 
-    private int corrected;
-
     public override string Id => "SnowTotalAfterLoad";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -43,16 +41,5 @@ public class SnowTotalAfterLoadFix : Fix
             sum += __instance.GetDepth(c);
         }
         totalDepth(__instance) = sum;
-        if (sum > 0)
-        {
-            instance.corrected++;
-        }
-    }
-
-    public override string Stats() => "VBF_SnowTotalAfterLoadStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

@@ -17,8 +17,6 @@ public class HistoryGoodwillTrimFix : Fix
     private static FieldInfo goodwillField;
     private static PropertyInfo indexer;
 
-    private int corrected;
-
     public override string Id => "HistoryGoodwillTrim";
 
     public override string Category => "VBF_CategoryWorld";
@@ -65,14 +63,6 @@ public class HistoryGoodwillTrimFix : Fix
         if (goodwill.Count > ticks.Count)
         {
             goodwill.RemoveRange(0, goodwill.Count - ticks.Count);
-            corrected++;
         }
-    }
-
-    public override string Stats() => "VBF_HistoryGoodwillTrimStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

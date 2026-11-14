@@ -12,8 +12,6 @@ public class TaleIgnoreRollFix : Fix
 {
     private static TaleIgnoreRollFix instance;
 
-    private int corrected;
-
     public override string Id => "TaleIgnoreRoll";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -53,14 +51,6 @@ public class TaleIgnoreRollFix : Fix
         {
             return Rand.Value;
         }
-        instance.corrected++;
         return 2f;
-    }
-
-    public override string Stats() => "VBF_TaleIgnoreRollStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

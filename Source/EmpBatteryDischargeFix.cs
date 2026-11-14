@@ -11,8 +11,6 @@ public class EmpBatteryDischargeFix : Fix
 {
     private static EmpBatteryDischargeFix instance;
 
-    private int corrected;
-
     public override string Id => "EmpBatteryDischarge";
 
     public override string Category => "VBF_CategoryColony";
@@ -38,16 +36,8 @@ public class EmpBatteryDischargeFix : Fix
     {
         if (battery.StunnedByEMP && instance.On)
         {
-            instance.corrected++;
             return;
         }
         givingBats.Add(battery);
-    }
-
-    public override string Stats() => "VBF_EmpBatteryDischargeStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

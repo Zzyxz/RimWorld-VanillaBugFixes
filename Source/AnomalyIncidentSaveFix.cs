@@ -9,8 +9,6 @@ public class AnomalyIncidentSaveFix : Fix
     private static AnomalyIncidentSaveFix instance;
     private static AccessTools.FieldRef<GameComponent_Anomaly, int> incidentTick;
 
-    private int corrected;
-
     public override string Id => "AnomalyIncidentSave";
 
     public override string Category => "VBF_CategorySaves";
@@ -31,16 +29,5 @@ public class AnomalyIncidentSaveFix : Fix
             return;
         }
         Scribe_Values.Look(ref incidentTick(__instance), "fireLevelIncidentTick", -99999);
-        if (Scribe.mode == LoadSaveMode.LoadingVars && incidentTick(__instance) > 0)
-        {
-            instance.corrected++;
-        }
-    }
-
-    public override string Stats() => "VBF_AnomalyIncidentSaveStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

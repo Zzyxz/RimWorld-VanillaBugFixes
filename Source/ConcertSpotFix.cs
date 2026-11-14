@@ -9,8 +9,6 @@ public class ConcertSpotFix : Fix
 {
     private static ConcertSpotFix instance;
 
-    private int corrected;
-
     public override string Id => "ConcertSpot";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -59,14 +57,6 @@ public class ConcertSpotFix : Fix
         }
         spot = result.InteractionCell;
         __result = true;
-        instance.corrected++;
         return false;
-    }
-
-    public override string Stats() => "VBF_ConcertSpotStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

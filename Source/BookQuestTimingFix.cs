@@ -13,8 +13,6 @@ public class BookQuestTimingFix : Fix
     private static BookQuestTimingFix instance;
     private static int readDelta = 1;
 
-    private int corrected;
-
     public override string Id => "BookQuestTiming";
 
     public override string Category => "VBF_CategoryWorld";
@@ -61,14 +59,6 @@ public class BookQuestTimingFix : Fix
         {
             return 1f;
         }
-        instance.corrected++;
         return readDelta;
-    }
-
-    public override string Stats() => "VBF_BookQuestTimingStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

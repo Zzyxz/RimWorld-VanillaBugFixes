@@ -10,8 +10,6 @@ public class RoyalAscentRefireFix : Fix
     private static RoyalAscentRefireFix instance;
     private static AccessTools.FieldRef<StorytellerComp_RefiringUniqueQuest, bool> generateSkipped;
 
-    private int corrected;
-
     public override string Id => "RoyalAscentRefire";
 
     public override string Category => "VBF_CategoryWorld";
@@ -42,7 +40,6 @@ public class RoyalAscentRefireFix : Fix
             yield break;
         }
         Quest newest = null;
-        Quest first = null;
         List<Quest> quests = Find.QuestManager.QuestsListForReading;
         for (int i = 0; i < quests.Count; i++)
         {
@@ -50,7 +47,6 @@ public class RoyalAscentRefireFix : Fix
             {
                 continue;
             }
-            first ??= quests[i];
             if (newest == null || quests[i].appearanceTick > newest.appearanceTick)
             {
                 newest = quests[i];
@@ -76,18 +72,7 @@ public class RoyalAscentRefireFix : Fix
         IncidentParms parms = comp.GenerateParms(props.incident.category, target);
         if (props.incident.Worker.CanFireNow(parms))
         {
-            if (newest != first)
-            {
-                instance.corrected++;
-            }
             yield return new FiringIncident(props.incident, comp, parms);
         }
-    }
-
-    public override string Stats() => "VBF_RoyalAscentRefireStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

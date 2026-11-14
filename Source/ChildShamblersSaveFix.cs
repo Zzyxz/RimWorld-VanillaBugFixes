@@ -9,8 +9,6 @@ public class ChildShamblersSaveFix : Fix
     private static ChildShamblersSaveFix instance;
     private static AccessTools.FieldRef<Difficulty, bool> allowed;
 
-    private int corrected;
-
     public override string Id => "ChildShamblersSave";
 
     public override string Category => "VBF_CategorySaves";
@@ -31,16 +29,5 @@ public class ChildShamblersSaveFix : Fix
             return;
         }
         Scribe_Values.Look(ref allowed(__instance), "childShamblersAllowed", true);
-        if (Scribe.mode == LoadSaveMode.LoadingVars && !allowed(__instance))
-        {
-            instance.corrected++;
-        }
-    }
-
-    public override string Stats() => "VBF_ChildShamblersSaveStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

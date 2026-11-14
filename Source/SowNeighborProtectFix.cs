@@ -11,8 +11,6 @@ public class SowNeighborProtectFix : Fix
 {
     private static SowNeighborProtectFix instance;
 
-    private int corrected;
-
     public override string Id => "SowNeighborProtect";
 
     public override string Category => "VBF_CategoryColony";
@@ -47,14 +45,6 @@ public class SowNeighborProtectFix : Fix
         {
             return false;
         }
-        instance.corrected++;
         return true;
-    }
-
-    public override string Stats() => "VBF_SowNeighborProtectStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

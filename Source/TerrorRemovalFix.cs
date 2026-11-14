@@ -10,8 +10,6 @@ public class TerrorRemovalFix : Fix
 {
     private static TerrorRemovalFix instance;
 
-    private int corrected;
-
     public override string Id => "TerrorRemoval";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -40,17 +38,6 @@ public class TerrorRemovalFix : Fix
         {
             memories.RemoveMemory(thought);
         }
-        if (thoughts.Count > 1)
-        {
-            instance.corrected++;
-        }
         return false;
-    }
-
-    public override string Stats() => "VBF_TerrorRemovalStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

@@ -9,8 +9,6 @@ public class PlaceRadiusFix : Fix
 {
     private static PlaceRadiusFix instance;
 
-    private int corrected;
-
     public override string Id => "PlaceRadius";
 
     public override string Category => "VBF_CategoryMapGeneration";
@@ -33,15 +31,7 @@ public class PlaceRadiusFix : Fix
         {
             return true;
         }
-        instance.corrected++;
         __result = GenPlace.TryPlaceThing(thing, center, map, mode, out _, placedAction, extraValidator, rot, squareRadius);
         return false;
-    }
-
-    public override string Stats() => "VBF_PlaceRadiusStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

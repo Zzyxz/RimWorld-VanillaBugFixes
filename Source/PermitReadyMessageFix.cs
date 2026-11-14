@@ -8,8 +8,6 @@ public class PermitReadyMessageFix : Fix
 {
     private static PermitReadyMessageFix instance;
 
-    private int sent;
-
     public override string Id => "PermitReadyMessage";
 
     public override string Category => "VBF_CategoryWorld";
@@ -42,16 +40,8 @@ public class PermitReadyMessageFix : Fix
             int ready = permit.LastUsedTick + permit.Permit.CooldownTicks;
             if (ready > now - delta && ready < now)
             {
-                instance.sent++;
                 Messages.Message("MessagePermitCooldownFinished".Translate(pawn, permit.Permit.LabelCap), pawn, MessageTypeDefOf.PositiveEvent);
             }
         }
-    }
-
-    public override string Stats() => "VBF_PermitReadyMessageStats".Translate(sent);
-
-    public override void ResetStats()
-    {
-        sent = 0;
     }
 }

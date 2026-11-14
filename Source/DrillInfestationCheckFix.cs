@@ -11,8 +11,6 @@ public class DrillInfestationCheckFix : Fix
     private static DrillInfestationCheckFix instance;
     private static AccessTools.FieldRef<CompDeepDrill, int> lastUsedTick;
 
-    private int corrected;
-
     public override string Id => "DrillInfestationCheck";
 
     public override string Category => "VBF_CategoryColony";
@@ -33,14 +31,6 @@ public class DrillInfestationCheckFix : Fix
         {
             return;
         }
-        instance.corrected++;
         __result = true;
-    }
-
-    public override string Stats() => "VBF_DrillInfestationCheckStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

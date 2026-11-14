@@ -11,8 +11,6 @@ public class MeleeDamageTotalFix : Fix
     private static MeleeDamageTotalFix instance;
     private static Func<Verb_MeleeAttackDamage, LocalTargetInfo, IEnumerable<DamageInfo>> damageInfos;
 
-    private int corrected;
-
     public override string Id => "MeleeDamageTotal";
 
     public override string Category => "VBF_CategoryCombat";
@@ -48,10 +46,6 @@ public class MeleeDamageTotalFix : Fix
             total = next;
             parts++;
         }
-        if (parts > 1)
-        {
-            instance.corrected++;
-        }
         __result = total;
         return false;
     }
@@ -81,12 +75,5 @@ public class MeleeDamageTotalFix : Fix
                 }
             }
         }
-    }
-
-    public override string Stats() => "VBF_MeleeDamageTotalStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

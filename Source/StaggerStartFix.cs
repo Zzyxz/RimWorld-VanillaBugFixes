@@ -10,8 +10,6 @@ public class StaggerStartFix : Fix
     private static AccessTools.FieldRef<StaggerHandler, int> ticksLeft;
     private static AccessTools.FieldRef<StaggerHandler, float> speedFactor;
 
-    private int corrected;
-
     public override string Id => "StaggerStart";
 
     public override string Category => "VBF_CategoryCombat";
@@ -32,17 +30,6 @@ public class StaggerStartFix : Fix
             return;
         }
         ref float factor = ref speedFactor(__instance);
-        if (factor < moveSpeedFactor)
-        {
-            instance.corrected++;
-        }
         factor = moveSpeedFactor;
-    }
-
-    public override string Stats() => "VBF_StaggerStartStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

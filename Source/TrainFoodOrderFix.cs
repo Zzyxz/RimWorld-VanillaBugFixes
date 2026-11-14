@@ -13,8 +13,6 @@ public class TrainFoodOrderFix : Fix
     private static Func<WorkGiver_InteractAnimal, Pawn, Pawn, bool, bool> canInteract;
     private static Func<WorkGiver_InteractAnimal, Pawn, Pawn, bool> hasFood;
 
-    private int corrected;
-
     public override string Id => "TrainFoodOrder";
 
     public override string Category => "VBF_CategoryAnimals";
@@ -39,19 +37,8 @@ public class TrainFoodOrderFix : Fix
         {
             return true;
         }
-        if (animal.RaceProps.EatsFood && animal.needs?.food != null && !hasFood(__instance, pawn, animal))
-        {
-            instance.corrected++;
-        }
         JobFailReason.Is(tooRecentlyText());
         __result = null;
         return false;
-    }
-
-    public override string Stats() => "VBF_TrainFoodOrderStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

@@ -10,8 +10,6 @@ public class SuppressionXpFix : Fix
 {
     private static SuppressionXpFix instance;
 
-    private int corrected;
-
     public override string Id => "SuppressionXp";
 
     public override string Category => "VBF_CategoryJobs";
@@ -45,14 +43,6 @@ public class SuppressionXpFix : Fix
                 return;
             }
             actor.skills.Learn(SkillDefOf.Intellectual, 0.1f * (delta - 1));
-            instance.corrected++;
         };
-    }
-
-    public override string Stats() => "VBF_SuppressionXpStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

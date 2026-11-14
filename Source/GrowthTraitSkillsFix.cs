@@ -13,8 +13,6 @@ public class GrowthTraitSkillsFix : Fix
     private static GrowthTraitSkillsFix instance;
     private static MethodInfo gainTrait;
 
-    private int corrected;
-
     public override string Id => "GrowthTraitSkills";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -49,13 +47,5 @@ public class GrowthTraitSkillsFix : Fix
             return;
         }
         TraitUtility.ApplySkillGainFromTrait(trait.pawn, trait);
-        instance.corrected++;
-    }
-
-    public override string Stats() => "VBF_GrowthTraitSkillsStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

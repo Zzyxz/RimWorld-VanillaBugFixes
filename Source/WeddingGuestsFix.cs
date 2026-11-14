@@ -9,8 +9,6 @@ public class WeddingGuestsFix : Fix
     private static WeddingGuestsFix instance;
     private static AccessTools.FieldRef<LordJob_Joinable_MarriageCeremony, int> secondCount;
 
-    private int corrected;
-
     public override string Id => "WeddingGuests";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -34,14 +32,6 @@ public class WeddingGuestsFix : Fix
         if (count != secondCount(__instance))
         {
             secondCount(__instance) = count;
-            instance.corrected++;
         }
-    }
-
-    public override string Stats() => "VBF_WeddingGuestsStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

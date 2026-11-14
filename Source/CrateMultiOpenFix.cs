@@ -15,8 +15,6 @@ public class CrateMultiOpenFix : Fix
     private static CrateMultiOpenFix instance;
     private static MethodInfo makeJob;
 
-    private int corrected;
-
     public override string Id => "CrateMultiOpen";
 
     public override string Category => "VBF_CategoryJobs";
@@ -52,19 +50,7 @@ public class CrateMultiOpenFix : Fix
         {
             return job;
         }
-        Thing thing = target.Thing;
-        if (thing?.Map != null && thing.Map.designationManager.DesignationOn(thing, DesignationDefOf.Open) == null)
-        {
-            instance.corrected++;
-        }
         job.ignoreDesignations = true;
         return job;
-    }
-
-    public override string Stats() => "VBF_CrateMultiOpenStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

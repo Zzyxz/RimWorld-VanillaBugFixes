@@ -11,8 +11,6 @@ public class HaulSourceCheckFix : Fix
     private static HaulSourceCheckFix instance;
     private static AccessTools.FieldRef<int> cycleIndex;
 
-    private int corrected;
-
     public override string Id => "HaulSourceCheck";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -45,19 +43,8 @@ public class HaulSourceCheckFix : Fix
             if (source.GetDirectlyHeldThings().Count != 0)
             {
                 __instance.RecalculateAllInHaulSource(source);
-                if (start + i > groups + 2)
-                {
-                    instance.corrected++;
-                }
             }
         }
         return false;
-    }
-
-    public override string Stats() => "VBF_HaulSourceCheckStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

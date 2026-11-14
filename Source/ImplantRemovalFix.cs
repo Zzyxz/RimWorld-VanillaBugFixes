@@ -13,8 +13,6 @@ public class ImplantRemovalFix : Fix
 {
     private static ImplantRemovalFix instance;
 
-    private int corrected;
-
     public override string Id => "ImplantRemoval";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -69,17 +67,6 @@ public class ImplantRemovalFix : Fix
         {
             return first;
         }
-        if (exact != first)
-        {
-            instance.corrected++;
-        }
         return exact;
-    }
-
-    public override string Stats() => "VBF_ImplantRemovalStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

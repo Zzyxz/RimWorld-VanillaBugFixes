@@ -12,8 +12,6 @@ public class WaterRaidMapFix : Fix
 {
     private static WaterRaidMapFix instance;
 
-    private int corrected;
-
     public override string Id => "WaterRaidMap";
 
     public override string Category => "VBF_CategoryCombat";
@@ -58,14 +56,6 @@ public class WaterRaidMapFix : Fix
         {
             return current;
         }
-        instance.corrected++;
         return target;
-    }
-
-    public override string Stats() => "VBF_WaterRaidMapStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

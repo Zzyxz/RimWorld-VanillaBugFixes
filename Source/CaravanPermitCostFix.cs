@@ -11,8 +11,6 @@ public class CaravanPermitCostFix : Fix
     private static CaravanPermitCostFix instance;
     private static AccessTools.FieldRef<RoyalTitlePermitWorker_Targeted, bool> freeField;
 
-    private int corrected;
-
     public override string Id => "CaravanPermitCost";
 
     public override string Category => "VBF_CategoryWorld";
@@ -39,22 +37,11 @@ public class CaravanPermitCostFix : Fix
                 Action original = command.action;
                 command.action = () =>
                 {
-                    if (freeField(__instance) != free)
-                    {
-                        instance.corrected++;
-                    }
                     freeField(__instance) = free;
                     original();
                 };
             }
             yield return gizmo;
         }
-    }
-
-    public override string Stats() => "VBF_CaravanPermitCostStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

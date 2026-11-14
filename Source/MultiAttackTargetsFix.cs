@@ -12,8 +12,6 @@ public class MultiAttackTargetsFix : Fix
     private static MultiAttackTargetsFix instance;
     private static AccessTools.FieldRef<List<Pawn>> sharedPawns;
 
-    private int corrected;
-
     public override string Id => "MultiAttackTargets";
 
     public override string Category => "VBF_CategoryCombat";
@@ -42,10 +40,6 @@ public class MultiAttackTargetsFix : Fix
         {
             List<Pawn> shared = sharedPawns();
             List<Pawn> saved = shared.ToList();
-            if (!saved.SequenceEqual(snapshot))
-            {
-                instance.corrected++;
-            }
             shared.Clear();
             shared.AddRange(snapshot);
             try
@@ -58,12 +52,5 @@ public class MultiAttackTargetsFix : Fix
                 shared.AddRange(saved);
             }
         };
-    }
-
-    public override string Stats() => "VBF_MultiAttackTargetsStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

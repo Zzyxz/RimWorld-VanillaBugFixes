@@ -17,8 +17,6 @@ public class RefugeeFactionFix : Fix
     [ThreadStatic]
     private static float? pendingChance;
 
-    private int corrected;
-
     public override string Id => "RefugeeFaction";
 
     public override string Category => "VBF_CategoryWorld";
@@ -54,15 +52,7 @@ public class RefugeeFactionFix : Fix
         pendingChance = null;
         if (chance != chanceForFaction)
         {
-            instance.corrected++;
             chanceForFaction = chance;
         }
-    }
-
-    public override string Stats() => "VBF_RefugeeFactionStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

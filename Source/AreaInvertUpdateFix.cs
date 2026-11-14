@@ -9,8 +9,6 @@ public class AreaInvertUpdateFix : Fix
     private static AreaInvertUpdateFix instance;
     private static Action<Area, IntVec3> markDirty;
 
-    private int corrected;
-
     public override string Id => "AreaInvertUpdate";
 
     public override string Category => "VBF_CategoryJobs";
@@ -40,13 +38,5 @@ public class AreaInvertUpdateFix : Fix
         {
             markDirty(__instance, cell);
         }
-        instance.corrected++;
-    }
-
-    public override string Stats() => "VBF_AreaInvertUpdateStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

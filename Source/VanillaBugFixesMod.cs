@@ -13,9 +13,6 @@ public abstract class Fix
 
     public abstract string Category { get; }
 
-    public bool Active { get; private set; }
-    public string Problem { get; private set; }
-
     public virtual bool DefaultOn => true;
 
     public bool On => VanillaBugFixesMod.Settings.IsOn(Id, DefaultOn);
@@ -27,11 +24,9 @@ public abstract class Fix
         try
         {
             Apply(harmony);
-            Active = true;
         }
         catch (Exception e)
         {
-            Problem = e.Message;
             Log.Warning("[Vanilla Bug Fixes] " + Id + " is not active: " + e);
         }
     }
@@ -56,12 +51,6 @@ public abstract class Fix
             throw new Exception(what + " not found");
         }
         return found;
-    }
-
-    public virtual string Stats() => null;
-
-    public virtual void ResetStats()
-    {
     }
 }
 
@@ -133,11 +122,14 @@ public class VanillaBugFixesMod : Mod
         Widgets.BeginScrollView(inRect, ref scroll, view);
         var list = new Listing_Standard();
         list.Begin(view);
-        list.Label("VBF_Intro".Translate());
-        list.GapLine();
-
+        bool firstGroup = true;
         foreach (var group in Fixes.GroupBy(f => f.Category))
         {
+            if (!firstGroup)
+            {
+                list.GapLine();
+            }
+            firstGroup = false;
             Text.Font = GameFont.Medium;
             list.Label(group.Key.Translate());
             Text.Font = GameFont.Small;
@@ -150,30 +142,6 @@ public class VanillaBugFixesMod : Mod
                 {
                     Settings.Set(fix.Id, on);
                 }
-                GUI.color = new Color(0.75f, 0.75f, 0.75f);
-                if (fix.Problem != null)
-                {
-                    list.Label("VBF_NotActive".Translate(fix.Problem));
-                }
-                else if (!fix.On)
-                {
-                    list.Label("VBF_SwitchedOff".Translate());
-                }
-                else
-                {
-                    list.Label(fix.Stats() ?? "VBF_Active".Translate().ToString());
-                }
-                GUI.color = Color.white;
-                list.Gap(8f);
-            }
-            list.GapLine();
-        }
-
-        if (list.ButtonText("VBF_ResetStats".Translate()))
-        {
-            foreach (var fix in Fixes)
-            {
-                fix.ResetStats();
             }
         }
         viewHeight = list.CurHeight + 20f;

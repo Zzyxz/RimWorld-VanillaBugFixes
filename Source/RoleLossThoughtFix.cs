@@ -12,8 +12,6 @@ public class RoleLossThoughtFix : Fix
     private static RoleLossThoughtFix instance;
     private static AccessTools.FieldRef<Precept_RoleMulti, List<IdeoRoleInstance>> cache;
 
-    private int corrected;
-
     public override string Id => "RoleLossThought";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -41,14 +39,6 @@ public class RoleLossThoughtFix : Fix
         __instance.chosenPawns.Remove(role);
         cache(__instance).Add(role);
         __instance.Notify_PawnUnassigned(p);
-        instance.corrected++;
         return false;
-    }
-
-    public override string Stats() => "VBF_RoleLossThoughtStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

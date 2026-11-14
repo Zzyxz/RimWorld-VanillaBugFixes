@@ -11,8 +11,6 @@ public class InventoryKeepListFix : Fix
     private static InventoryKeepListFix instance;
     private static AccessTools.FieldRef<List<ThingDefCount>> itemsToKeep;
 
-    private int corrected;
-
     public override string Id => "InventoryKeepList";
 
     public override string Category => "VBF_CategoryJobs";
@@ -38,17 +36,6 @@ public class InventoryKeepListFix : Fix
         {
             return;
         }
-        if (__instance.innerContainer.Count > 0 && __instance.pawn?.drugs?.CurrentPolicy == null)
-        {
-            instance.corrected++;
-        }
         list.Clear();
-    }
-
-    public override string Stats() => "VBF_InventoryKeepListStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

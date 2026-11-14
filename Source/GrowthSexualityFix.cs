@@ -9,8 +9,6 @@ public class GrowthSexualityFix : Fix
 {
     private static GrowthSexualityFix instance;
 
-    private int corrected;
-
     public override string Id => "GrowthSexuality";
 
     public override string Category => "VBF_CategoryDailyLife";
@@ -42,13 +40,5 @@ public class GrowthSexualityFix : Fix
             return;
         }
         PawnGenerator.TryGenerateSexualityTraitFor(___pawn, allowGay: true);
-        instance.corrected++;
-    }
-
-    public override string Stats() => "VBF_GrowthSexualityStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }

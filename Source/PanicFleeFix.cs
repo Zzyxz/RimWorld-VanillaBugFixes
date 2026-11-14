@@ -12,8 +12,6 @@ public class PanicFleeFix : Fix
 {
     private static PanicFleeFix instance;
 
-    private int corrected;
-
     public override string Id => "PanicFlee";
 
     public override string Category => "VBF_CategoryCombat";
@@ -43,14 +41,6 @@ public class PanicFleeFix : Fix
         {
             return rest;
         }
-        instance.corrected++;
         return -rest;
-    }
-
-    public override string Stats() => "VBF_PanicFleeStats".Translate(corrected);
-
-    public override void ResetStats()
-    {
-        corrected = 0;
     }
 }
